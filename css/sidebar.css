@@ -1,0 +1,135 @@
+#container {
+	font-size: 14px;
+	font-family: Segoe UI, Myriad Pro, Tahoma, Arial;
+	text-align: left;
+	display:block;
+	margin:20px 40px 20px 20px;
+	width: 320px;
+	border-radius: 10px;
+	border: 1px solid #919191;
+	background-color: #fff;
+	position: fixed;
+	right: 0;
+	top: 10px;
+}
+
+h1 {
+	font-size: 36px;
+	text-align:left;
+	margin: 0;
+}
+
+h3 {
+	font-size: 12px;
+	color: #666;
+	margin: 10px 0 4px 0;
+}
+
+.content {
+	padding: 7px 15px;
+}
+
+.subtitle {
+	color: #444;
+}
+
+.subcontent {
+	margin: 3px 0;
+}
+
+.icon.email {
+	height: 12px;
+	vertical-align: middle;
+}
+
+.edge {
+	width: 100%;
+	height: 36px;
+	background-color: #EEE;
+}
+
+.edge.top {
+	border-radius: 10px 10px 0 0;
+}
+
+.edge.bottom {
+	border-radius: 0 0 10px 10px;
+}
+
+ul.share {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+}
+ul.share li {
+	list-style-type: none;
+	display: inline;
+	float: left;
+	padding: 0 5px 0 0;
+}
+ul.share li a {
+	text-indent: -9999px;
+	width: 32px;
+	height: 33px;
+	display: block;
+	overflow: hidden;
+	margin: 2px;
+}
+ul.share li a {
+	background: url('../img/share-icons.png') no-repeat 0 0;
+}
+
+ul.share li a.twitter:hover {
+	background-position: -38px -658px;
+}
+ul.share li a.twitter {
+	background-position: 0 -658px;
+}
+ul.share li a.googleplus:hover {
+	background-position: -38px -621px;
+}
+ul.share li a.googleplus {
+	background-position: 0 -621px;
+}
+ul.share li a.linkedin:hover {
+	background-position: -38px -292px;
+}
+ul.share li a.linkedin {
+	background-position: 0 -292px;
+}
+ul.share li a.delicious:hover {
+	background-position: -38px -146px;
+}
+ul.share li a.delicious {
+	background-position: 0 -146px;
+}
+ul.share li a.wordpress:hover {
+	background-position: -38px -474.5px;
+}
+ul.share li a.wordpress {
+	background-position: 0 -474.5px;
+}
+ul.share li a.github:hover {
+	background-position: -38px -981px;
+}
+ul.share li a.github {
+	background-position: 0 -981px;
+}
+a {
+	color: #00A8E8;
+	text-decoration: none;
+	outline: 0;
+	-webkit-transition-property: background color;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-property: background color;
+	-moz-transition-duration: 0.2s;
+	-moz-transition-timing-function: ease-out;
+	-o-transition-property: background color;
+	-o-transition-duration: 0.2s;
+	-o-transition-timing-function: ease;
+	transition-property: background color;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-out;
+}

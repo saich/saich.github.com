@@ -1,3 +1,27 @@
+body {
+	background-color:#000;
+	font:16px Courier;
+}
+
+#inspired, #unsupported {
+	color:#FFF;
+	padding-top:20px;
+	font-family:Courier;
+	text-align:center;
+}
+#quine {
+	margin: 10px;
+}
+
+a {
+	color:#2A6CA9;
+	text-decoration:none;
+}
+a:hover, a:active {
+	color:#2C87CC;
+	text-decoration:underline;
+}
+
 #container {
 	font-size: 14px;
 	font-family: Segoe UI, Myriad Pro, Tahoma, Arial;
@@ -133,3 +157,51 @@ a {
 	transition-duration: 0.2s;
 	transition-timing-function: ease-out;
 }
+
+@media screen and (max-width: 1200px) {
+	body {
+		margin: 0 auto;
+	}
+
+	#container {
+		width: 95%;
+		max-width: 280px;
+		margin: 20px 2px;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	
+	#container {
+		width: 95%;
+		max-width: 280px;
+		margin: 20px auto;
+	}
+	.content {
+		padding: 7px 15px;
+	}
+	#quine {
+		/*zoom: 90%;*/
+	}
+}
+
+@media screen and (max-width: 360px) {
+	body {
+		margin: 0 auto;
+	}
+	#container {
+		width: 95%;
+		max-width: 320px;
+		margin: 30px auto;
+		position:static;
+	}
+
+	.content {
+		padding: 7px 5px;
+	}
+
+	#quine {
+		display: none;
+	}
+}
+

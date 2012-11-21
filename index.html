@@ -4,8 +4,7 @@
 		<meta charset="utf-8">
 		<base target="_blank">
 		<title>Sai Prasad</title>
-		<link rel="stylesheet" type="text/css" href="css/sidebar.css">
-		<link rel="stylesheet" type="text/css" href="css/quine.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
 	<body>
 	<div id="container">
@@ -33,16 +32,16 @@
 		</div>
 		<div class="edge bottom"></div>
 	</div>
-	<div id="fox"></div>
+	<div id="quine"></div>
 	<div id="unsupported" style="display:none;">Your browser is not supported. Please use the latest Mozilla Firefox or Google Chrome or Safari</div>
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script type="text/javascript">
 		var text = "<!DOCTYPE html>" + document.getElementsByTagName('html')[0].innerHTML + "</html>";
 		text=text.replace(/\s*(\n\s*)+/ig,'').replace(/\s+(?= )/g,'').split("");
 
 		var image=new Image(),
 			span=$('<span>',{'text':'.'});
-		$('#fox').append(span);
+		$('#quine').append(span);
 
 		var span_width=span.width(),
 			span_height=span.height();
@@ -79,7 +78,7 @@
 					target_cols=Math.ceil((cnvs.width-2) / x_size)+1,
 					ypad=span_height;
 				
-				$("#fox").width(span_width*target_cols + "px");
+				$("#quine").width(span_width*target_cols + "px");
 				
 				for(var y=0;y<cnvs.height-1;y+=y_size){
 					var total=0,row=$('<span>').css({'display':'block','height':span_height});
@@ -102,7 +101,7 @@
 
 						lastSeven = (lastSeven+character).substr(-7);
 					}
-				   $('#fox').append(row);
+				   $('#quine').append(row);
 				}
 			}
 		};
@@ -132,6 +131,6 @@
 			return "rgb(" + red + "," + green + "," + blue + ")";
 		}
     </script>
-	<script type="text/javascript" src="/js/analytics.js"></script>
+	<script type="text/javascript" src="js/analytics.js"></script>
   </body>
 </html>

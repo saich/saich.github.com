@@ -51,9 +51,14 @@ GoogleAnalytics.prototype.setSiteSpeedSampleRate = function (rate) {
 	window._gaq.push(['_setSiteSpeedSampleRate', rate]);
 };
 
+GoogleAnalytics.prototype.setDomainName = function (domain) {
+	window._gaq.push(['_setDomainName', domain]);
+};
+
 /***********************************************************************/
 
 var tracker = new GoogleAnalytics("UA-4465434-4");
+tracker.setDomainName(window.location.host);
 tracker.setSiteSpeedSampleRate(100);
 tracker.trackPageView();
 

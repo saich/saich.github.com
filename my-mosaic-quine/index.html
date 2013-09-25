@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Sai Prasad</title>
-   <link rel="stylesheet" type="text/css" href="css/quine.css"></link>
+   <link rel="stylesheet" type="text/css" href="/stylesheets/main.css"></link>
   </head>
   <body>
     <div id="fox"></div>
@@ -21,7 +21,7 @@
 			span_height=span.height();
 		span.remove();
 
-		image.src='img/me-large.jpg';
+		image.src='/images/me-large.jpg';
 		image.onload=function(){
 			var cnvs=document.createElement('canvas');
 			cnvs.width=image.width;
@@ -131,7 +131,6 @@
 			return "rgb("+red+","+green+","+blue+")";
 		}
     </script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="/js/analytics.js"></script>
+	<script type="text/javascript" src="/javascripts/analytics.js"></script>
   </body>
 </html>

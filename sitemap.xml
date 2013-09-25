@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://saiprasad.me/blog/blog/archives/</loc>
+        <loc>http://saiprasad.me/blog/archives/</loc>
         <lastmod>2013-09-25T10:34:43+05:30</lastmod>
     </url>
     <url>
@@ -9,7 +9,7 @@
         <lastmod>2013-09-25T10:34:43+05:30</lastmod>
     </url>
     <url>
-        <loc>http://saiprasad.me/blog/robots.txt</loc>
+        <loc>http://saiprasad.me/robots.txt</loc>
         <lastmod>2013-09-25T10:34:43+05:30</lastmod>
     </url>
 </urlset>

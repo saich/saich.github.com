@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Reflections of a scattered Mind!!]]></title>
-  <link href="http://saiprasad.me/blog/atom.xml" rel="self"/>
-  <link href="http://saiprasad.me/blog/"/>
-  <updated>2013-09-25T11:37:56+05:30</updated>
-  <id>http://saiprasad.me/blog/</id>
+  <link href="http://saiprasad.me/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-09-25T12:55:48+05:30</updated>
+  <id>http://saiprasad.me/</id>
   <author>
     <name><![CDATA[Sai Prasad]]></name>
     

@@ -1,0 +1,239 @@
+body {
+	background-color:#000;
+	font:16px Courier;
+}
+
+#inspired, #unsupported {
+	color:#FFF;
+	padding-top:20px;
+	font-family:Courier;
+	margin-left: 10px;
+	margin-right: 330px;
+}
+#quine {
+	margin: 10px;
+}
+
+a {
+	color:#2A6CA9;
+	text-decoration:none;
+}
+a:hover, a:active {
+	color:#2C87CC;
+	text-decoration:underline;
+}
+
+#container {
+	width: 320px;
+	margin:20px 40px 20px 20px;
+	position: fixed;
+	right: 0;
+	top: 10px;
+
+	-webkit-perspective: 400px;
+	   -moz-perspective: 800px;
+        -ms-perspective: 800px;
+         -o-perspective: 800px;
+            perspective: 800px;
+}
+
+.inner-container {
+	font-size: 14px;
+	font-family: Segoe UI, Myriad Pro, Tahoma, Arial;
+	text-align: left;
+	display:block;
+	border: 1px solid #919191;
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+.inner-container {
+	-webkit-transform: rotateY(-15deg);
+	   -moz-transform: rotateY(-15deg);
+	    -ms-transform: rotateY(-15deg);
+	     -o-transform: rotateY(-15deg);
+	        transform: rotateY(-50deg);
+
+	-webkit-transition: -webkit-transform 1s;
+	   -moz-transition: -moz-transform 1s;
+	     -o-transition: -o-transform 1s;
+	    -ms-transition: -ms-transform 1s;
+	        transition: transform 1s;
+}
+
+.inner-container:hover {
+	-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	   -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	    -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	     -o-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+
+h1 {
+	font-size: 36px;
+	text-align:left;
+	margin: 0;
+}
+
+h3 {
+	font-size: 12px;
+	color: #666;
+	margin: 10px 0 4px 0;
+}
+
+.content {
+	padding: 7px 15px;
+}
+
+.subtitle {
+	color: #444;
+}
+
+.subcontent {
+	margin: 3px 0;
+}
+
+.icon.email {
+	height: 12px;
+	vertical-align: middle;
+}
+
+.edge {
+	width: 100%;
+	height: 36px;
+	background-color: #EEE;
+}
+
+.edge.top {
+	border-radius: 10px 10px 0 0;
+}
+
+.edge.bottom {
+	border-radius: 0 0 10px 10px;
+}
+
+ul.share {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+}
+ul.share li {
+	list-style-type: none;
+	display: inline;
+	float: left;
+	padding: 0 5px 0 0;
+}
+ul.share li a {
+	text-indent: -9999px;
+	width: 32px;
+	height: 33px;
+	display: block;
+	overflow: hidden;
+	margin: 2px;
+}
+ul.share li a {
+	background: url('../img/share-icons.png') no-repeat 0 0;
+}
+
+ul.share li a.twitter:hover {
+	background-position: -38px -658px;
+}
+ul.share li a.twitter {
+	background-position: 0 -658px;
+}
+ul.share li a.googleplus:hover {
+	background-position: -38px -621px;
+}
+ul.share li a.googleplus {
+	background-position: 0 -621px;
+}
+ul.share li a.linkedin:hover {
+	background-position: -38px -292px;
+}
+ul.share li a.linkedin {
+	background-position: 0 -292px;
+}
+ul.share li a.delicious:hover {
+	background-position: -38px -146px;
+}
+ul.share li a.delicious {
+	background-position: 0 -146px;
+}
+ul.share li a.wordpress:hover {
+	background-position: -38px -474.5px;
+}
+ul.share li a.wordpress {
+	background-position: 0 -474.5px;
+}
+ul.share li a.github:hover {
+	background-position: -38px -981px;
+}
+ul.share li a.github {
+	background-position: 0 -981px;
+}
+a {
+	color: #00A8E8;
+	text-decoration: none;
+	outline: 0;
+	-webkit-transition-property: background color;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-property: background color;
+	-moz-transition-duration: 0.2s;
+	-moz-transition-timing-function: ease-out;
+	-o-transition-property: background color;
+	-o-transition-duration: 0.2s;
+	-o-transition-timing-function: ease;
+	transition-property: background color;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-out;
+}
+
+@media screen and (max-width: 1200px) {
+	body {
+		margin: 0 auto;
+	}
+
+	#container {
+		width: 95%;
+		max-width: 280px;
+		margin: 20px 2px;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	
+	#container {
+		width: 95%;
+		max-width: 280px;
+		margin: 20px auto;
+	}
+	.content {
+		padding: 7px 15px;
+	}
+	#quine {
+		/*zoom: 90%;*/
+	}
+}
+
+@media screen and (max-width: 360px) {
+	body {
+		margin: 0 auto;
+	}
+	#container {
+		width: 95%;
+		max-width: 320px;
+		margin: 30px auto;
+		position:static;
+	}
+
+	.content {
+		padding: 7px 5px;
+	}
+
+	#quine, #inspired, #unsupported {
+		display: none;
+	}
+}
+

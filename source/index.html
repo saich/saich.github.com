@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="google-site-verification" content="59Nj9VPHnwuNYWqlo_-pZwK8a_hXmMRyKsRxm-d8H0k" />
+        <base target="_blank">
+        <title>Sai Prasad</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+    </head>
+    <body>
+    <div id="container">
+        <div class="inner-container">
+        <div class="edge top"></div>
+        <div class="content">
+            <h1>Sai Prasad</h1>
+            <div class="subtitle">Software Enthusiast</div>
+            <div class="subcontent">
+                <h3>Contact</h3>
+                <div>
+                    <img src="/images/email2.png" alt="@" class="icon email"/> <a href="mailto:saiprasad.ch@gmail.com" title="Drop me a mail">saiprasad.ch@gmail.com</a>
+                </div>
+            </div>
+            <div class="subcontent">
+                <h3>Web Profiles</h3>
+                <ul class="share">
+                    <!--<li><a class="wordpress" href="http://blog.saionline.co.in" title="Blog">Blog</a></li>-->
+                    <li><a class="linkedin" href="http://www.linkedin.com/in/saich" title="LinkedIn Profile">LinkedIn</a></li>
+                    <li><a class="github" href="https://github.com/saich" title="My work on GitHub">Github</a></li>
+                    <li><a class="twitter" href="https://twitter.com/saiprasadch" title="Follow me on Twitter">Twitter</a></li>
+                    <li><a class="googleplus" href="http://www.google.com/profiles/saiprasad.ch" title="Google+ Profile">Google+</a></li>
+                    <li><a class="delicious" href="http://www.delicious.com/saiprasad.ch" title="Bookmarks on Delicious">Delicious</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="edge bottom"></div>
+    </div></div>
+    <div id="quine"></div>
+    <div id="unsupported" style="display:none;">Your browser is not supported. Please use the latest Mozilla Firefox or Google Chrome or Safari</div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        var text = "<!DOCTYPE html>" + document.getElementsByTagName('html')[0].innerHTML + "</html>";
+        text=text.replace(/\s*(\n\s*)+/ig,'').replace(/\s+(?= )/g,'').split("");
+
+        var image=new Image(),
+            span=$('<span>',{'text':'.'});
+        $('#quine').append(span);
+
+        var span_width=span.width(),
+            span_height=span.height();
+        span.remove();
+
+        image.src='/images/me-large.jpg';
+        image.onload=function(){
+            var cnvs=document.createElement('canvas');
+            cnvs.width=image.width;
+            cnvs.height=image.height;
+
+            $('body').append(cnvs);
+
+            var ctx=cnvs.getContext('2d');
+            ctx.drawImage(image,0,0);
+            var per_box=Math.floor(((cnvs.width*cnvs.height)/text.length)),
+                ratio=span_height/span_width,
+                x_size=Math.sqrt(per_box/ratio),
+                y_size=per_box/x_size,
+                imageData;
+
+            try {
+                imageData=ctx.getImageData(0,0,cnvs.width,cnvs.height);
+                getPoints(imageData);
+            } catch(ex) {
+                $("#unsupported").show();
+            }
+            $(cnvs).remove();
+        
+            function getPoints(imagedata){
+                var i=0,lastSeven='';
+                
+                var target_rows=Math.ceil((cnvs.height-2) / y_size)+1,
+                    target_cols=Math.ceil((cnvs.width-2) / x_size)+1,
+                    ypad=span_height;
+                
+                $("#quine").width(span_width*target_cols + "px");
+                
+                for(var y=0;y<cnvs.height-1;y+=y_size){
+                    var total=0,row=$('<span>').css({'display':'block','height':span_height});
+                    var ypos = y * span_height / y_size;
+
+                    for(var x=0;x<cnvs.width - 1;x+=x_size){
+                        var color=getColor(imageData,x,y),
+                        character=(text[i] !== undefined) ? text[i] : "";
+                        
+                        i++;
+                        total++;
+
+                        $(row).append($("<span>",{
+                            'style':('color:'+ color),
+                            'text':character
+                            }
+                        ));
+                        var font_style="normal";
+                        var font_size="16px";
+
+                        lastSeven = (lastSeven+character).substr(-7);
+                    }
+                   $('#quine').append(row);
+                }
+            }
+        };
+          
+          /* get the color */
+        function getColor(imageData, x, y) {
+            var x = Math.round(x),
+                y = Math.round(y),
+                index = (y * imageData.width + x) * 4,
+                red = imageData.data[index],
+                green = imageData.data[index + 1],
+                blue = imageData.data[index + 2],
+                alpha = imageData.data[index + 3];
+
+            /* Add border around the pixel */
+            for(var x2 = -1; x2 <= 1; x2++) {
+                for(var y2 = -1; y2 <= 1; y2++) {
+                    if(!(x2 == 0 && y2 == 0)){
+                        var index_new = ((y + y2) * imageData.width + x + x2) * 4;
+                        imageData.data[index_new] = 255;
+                        imageData.data[index_new + 1] = 255;
+                        imageData.data[index_new + 2] = 255;
+                        imageData.data[index_new + 3] = alpha;
+                    }
+                }
+            }
+            return "rgb(" + red + "," + green + "," + blue + ")";
+        }
+    </script>
+    <script type="text/javascript" src="/javascripts/analytics.js"></script>
+  </body>
+</html>

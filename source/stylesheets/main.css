@@ -133,7 +133,7 @@ ul.share li a {
 	margin: 2px;
 }
 ul.share li a {
-	background: url('../img/share-icons.png') no-repeat 0 0;
+	background: url('/images/share-icons.png') no-repeat 0 0;
 }
 
 ul.share li a.twitter:hover {

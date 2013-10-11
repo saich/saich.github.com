@@ -3,8 +3,10 @@
 - Install Ruby 1.9.3 or greater.
 - Install dependencies.
 
+```
 	gem install bundler
 	bundle install
+```
 
 **Reference:** [http://octopress.org/docs/setup/](http://octopress.org/docs/setup/)
 

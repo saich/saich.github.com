@@ -15,7 +15,9 @@ In my <a title="Display Images in Instant Messengers" href="/blog/2009/08/29/dis
 
 Now, my point of this article is, what is this cache location of images, so that I can easily navigate over to there and pick a friend's avatar from there..  :-) Well on Windows Systems, the display images cache directory for GTalk is:<span id="ctl00_MainContentPlaceholder_ctl01_ctl00_lblEntry"> </span>
 
-<span id="ctl00_MainContentPlaceholder_ctl01_ctl00_lblEntry">C:\Documents and Settings\<em>&lt;windows username&gt;</em>\Local Settings\Application Data\Google\Google Talk\avatars</span>
+```
+    C:\Documents and Settings\<windows username>\Local Settings\Application Data\Google\Google Talk\avatars
+```
 
 <span>The images saved in there are PNG files with transparent background, so you can open them with basic image application [maybe, you need to change the application extension to .png]. Do you observe there are two images for each id  there ? One image is 32 x32 [ends with .online.avatar] and the other is 96 x 96 px image [ends with .original.avatar].</span>
 

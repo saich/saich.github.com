@@ -1,0 +1,59 @@
+---
+layout: post
+title: 'Browser Wars: Learning from each other'
+categories: Technical
+tags:
+  - browsers
+  - chrome
+  - firefox
+  - ie
+  - web
+
+---
+
+The most popular browsers from the country I come from (where Mac is rare) are Google Chrome, Mozilla Firefox &amp; Microsoft Internet Explorer. Like any other browser, these all have the same goal - to make browsing experience richer &amp; better. Yet, there are a lot of differences in their ways and some are better than other in some ways.
+
+If I ever have to make a generic purpose browser, I'd certainly pick good (for inclusion) &amp; bad (for exclusion) things from the current browsers.
+<h5>Google Chrome:</h5>
+The recent one and certainly a game changer. It has improved the user expectations from a browser by 100x.
+
+<strong>The Good</strong>:
+<ul>
+	<li>The crashless browser -  protect the user even from the crashes in external plug-ins (Thankfully, Firefox also implemented out-of-box plugins)</li>
+	<li>Faster startup time - Do things that are only absolutely needed. Nothing more. Defer everything else, to post-startup (in parallel with the user's browsing).</li>
+	<li>Sandboxing - Whatever you do on web stays on web. Protect the machine from all the various security issues.</li>
+	<li>Explicit permissions listed for Extensions - user must know what an extension is capable of (despite of what it claims to do)</li>
+	<li>Silent updation: Push updates only when it is good for users. Then, who would say "no" to better browsing experience? So, there is no point in showing an annoying dialog "Updates Available" when you already know the user clicks "yes".</li>
+	<li>Incognito Mode starts a new session without closing the current session (sadly, Firefox does that)</li>
+</ul>
+<strong>The Bad: </strong>
+<ul>
+	<li>Weakest &amp; the most limited extension model - So limited that it may give you a feeling that the word "extension" doesn't suit it.</li>
+	<li>Still an immature platform for developers. Extension Model hasn't moved but the other parts (rendering, UI etc.) are moving forward at a very fast pace. Even, many bugs in the chrome extensions are not getting fixed for many months.</li>
+</ul>
+<h5>Mozilla Firefox</h5>
+<strong>The Good:</strong>
+<ul>
+	<li>Super cool extension model. There is almost nothing that can't be done by the addons. And, XPCOM works across all the platforms.</li>
+	<li>Known to be the developer-friendly browser from long time. One of the early browsers that emphasized on standards and innovation from its early days.</li>
+</ul>
+<strong>The Bad:</strong>
+<ul>
+	<li>Known to be memory hog. Not efficient at Memory management. Have issues with Intel's hyperthreading.</li>
+	<li>MaxVersion in addons is mandatory and is limited to current version (you can't just use * for maxversion). The only issue with this is each and every addon is to be updated (you add features or not) with every major version release (which is once in 12 weeks as of now).</li>
+	<li>Private browsing closes the current session and starts a new one. After closing private session, it restores the earlier session. This means you can't do both (with default command line options)</li>
+	<li>Every extension have complete control (including a binary component), because of lack of a permission model. You can never trust an extension because of this!</li>
+</ul>
+<h5>Internet Explorer</h5>
+<strong>The Good:</strong>
+<ul>
+	<li>Its never late to catch up with the standards, speed &amp; security (with IE 9 &amp; IE 10)</li>
+	<li>Native 64-bit for 64-bit OS. (I can't believe Firefox and Chrome do not have them for Windows)</li>
+</ul>
+<strong>The Bad:</strong>
+<ul>
+	<li>Still maintains the completely idiotic 'Quirks Mode'. I don't see  the greater cause of maintaining a version which is full of bugs,  extremely slow and follows no standards, and also all developers hate  it.</li>
+	<li>Extension Model - Its a big pain. You need to be comfortable  with COM to get started with. Its much comfortable to think addons  don't exist at all for this version.</li>
+	<li>Supports ActiveX plugins when the whole world uses NPAPI plugins.</li>
+</ul>
+<em>Disclaimer: All the above are my own thoughts, and I've to confess I haven't researched every point. So, not all the above may be true, but is to the best of my knowledge.</em>

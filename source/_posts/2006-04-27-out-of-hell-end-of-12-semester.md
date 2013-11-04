@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Out of Hell - End of 1/2 semester!!'
 categories: Academics
 tags: academics nitw results semester

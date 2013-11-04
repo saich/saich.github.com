@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Firefox Addons: Little Housekeeping Tips'
 categories: Technical
 tags:

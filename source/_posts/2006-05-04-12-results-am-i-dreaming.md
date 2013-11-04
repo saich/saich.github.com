@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: '1/2 Results: Am I dreaming??'
 categories: Academics
 tags: academics nitw

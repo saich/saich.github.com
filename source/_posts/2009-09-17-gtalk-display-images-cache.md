@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'GTalk: Display Images Cache'
 categories:
 - Technical

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Just Friends! It got something !!'
 categories: TimePass
 tags:

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'My First Earning'
 categories:
 - My Experiences

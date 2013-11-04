@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'C++ Quickies #I : Long live the STL'
 categories: Technical
 tags:

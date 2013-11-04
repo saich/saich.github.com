@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Dr. APJ Abdul Kalam in Technozion ''08'
 tags:
   - nitw

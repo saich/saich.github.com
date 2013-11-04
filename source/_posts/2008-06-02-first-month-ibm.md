@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'First Month @ IBM'
 categories:
 - My Experiences

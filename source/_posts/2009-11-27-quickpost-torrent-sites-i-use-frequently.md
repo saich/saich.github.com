@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'QuickPost: Torrent sites I use frequently'
 published: false
 categories: TimePass

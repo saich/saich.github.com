@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'This week in my life'
 
 ---

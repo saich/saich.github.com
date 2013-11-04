@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Ask your computer to help you in household chores'
 categories:
 - TimePass

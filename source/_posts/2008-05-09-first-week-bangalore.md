@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'First Week @ Bangalore'
 categories:
 - My Experiences

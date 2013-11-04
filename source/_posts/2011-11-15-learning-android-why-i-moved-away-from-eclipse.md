@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Learning Android : Why I moved away from Eclipse'
 categories: Technical
 tags:

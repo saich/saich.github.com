@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'I''ve been selected for IBM ISL Internship'
 categories: 
 - My Experiences

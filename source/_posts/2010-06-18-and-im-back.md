@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'And, I''m back!'
 categories:
 - My Experiences

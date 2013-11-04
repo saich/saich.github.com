@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Installing Android !!!'
 categories: 
 - Technical

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Display Images in Instant Messengers'
 categories:
 - Technical

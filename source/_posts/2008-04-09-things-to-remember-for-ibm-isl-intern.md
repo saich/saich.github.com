@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Things to Remember for IBM ISL Intern'
 tags: internship ibm-isl bangalore
 

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Doing things the HTML way'
 categories:
 - Technical

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Dojo: A Javascript Library'
 categories:
 - My Experiences

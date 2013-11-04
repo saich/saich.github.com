@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Is Mozilla Firefox more secure than Internet Explorer?'
 categories:
 - Technical

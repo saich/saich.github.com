@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'New Domain'
 categories:
 - My Experiences

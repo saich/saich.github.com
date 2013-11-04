@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Geeks are awesome!'
 categories: TimePass
 tags:

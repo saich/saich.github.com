@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'I had a problem'
 categories:
 - Technical

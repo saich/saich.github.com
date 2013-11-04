@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Opening Post on Blogger... Why This Blog ???'
 categories: 
 - My Experiences

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: '5 Reasons I dislike Flash'
 categories:
 - My Experiences

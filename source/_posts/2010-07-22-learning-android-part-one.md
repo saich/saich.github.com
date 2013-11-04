@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Learning Android: Part I'
 categories: Technical
 tags:

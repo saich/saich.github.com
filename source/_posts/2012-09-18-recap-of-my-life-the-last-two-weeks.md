@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Recap of my life: The last two weeks '
 
 ---

@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Square One'
 categories:
 - My Experiences

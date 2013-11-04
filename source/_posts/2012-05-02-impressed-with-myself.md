@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Impressed with myself'
 categories:
 - My Experiences

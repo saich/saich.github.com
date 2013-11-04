@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'The Benefits of Failure'
 categories:
 - My Experiences

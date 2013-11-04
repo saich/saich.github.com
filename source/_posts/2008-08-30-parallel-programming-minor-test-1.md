@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Parallel Programming Minor Test - I'
 categories:
 - Academics

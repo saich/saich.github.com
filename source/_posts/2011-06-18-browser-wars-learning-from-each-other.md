@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: 'Browser Wars: Learning from each other'
 categories: Technical
 tags:

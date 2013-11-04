@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: c | Reflections of a scattered Mind!!]]></title>
+  <link href="http://saiprasad.me/tags/c/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-11-04T14:10:26+05:30</updated>
+  <id>http://saiprasad.me/</id>
+  <author>
+    <name><![CDATA[Sai Prasad]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[C++ Quickies #I : Long live the STL]]></title>
+    <link href="http://saiprasad.me/blog/2010/09/c-quickies-i-long-live-the-stl/"/>
+    <updated>2010-09-19T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2010/09/c-quickies-i-long-live-the-stl</id>
+    <content type="html"><![CDATA[<p>Its been quite some time (16+ months) I&rsquo;ve been out of college and started using STL. Trust me, I didn&rsquo;t know much about STL in college, though I used std::string &amp; std::vector everywhere I could. Now, it seems like I couldn&rsquo;t (wouldn&rsquo;t ?) write a program without using STL at all. A few snippets that I really found useful (and simple) and I regularly use where ever possible.</p>
+
+<p>To output the elements (all / subset) in a container (lets say vector), separated by a delimiter, say new line:</p>
+
+<p>```</p>
+
+<pre><code>#include &lt;algorithm&gt;
+std::copy(v.begin(), v.end(), std::ostream_iterator(std::cout, "\n"));
+</code></pre>
+
+<p>```</p>
+
+<p>Want to sort an array? No problem &hellip; :)</p>
+
+<p>```</p>
+
+<pre><code>#include &lt;algorithm&gt;
+std::sort(array, array + lengthOfArray);
+</code></pre>
+
+<p>```</p>
+
+<p>Read from the standard input into a vector until the end-of-stream?</p>
+
+<p>```</p>
+
+<pre><code>#include &lt;algorithm&gt;
+#include &lt;iterator&gt;
+#include &lt;vector&gt;
+
+typedef std::istream_iterator&lt;int&gt; istream_iterator_int;
+std::vector&lt;int&gt; v;
+istream_iterator_int start (std::cin);
+istream_iterator_int end;
+std::back_insert_iterator&lt;vector&lt;int&gt; &gt; dest (v);
+std::copy (start, end, dest);
+</code></pre>
+
+<p>```</p>
+
+<p>Count the no. of instances an object is found?</p>
+
+<p>```</p>
+
+<pre><code>#include &amp;lt;algorithm&amp;gt;
+size_t count = std::count(v.begin(), v.end(), 42); // Returns no. of elements in v with value 42.
+</code></pre>
+
+<p>```</p>
+
+<p>And let me inform you&hellip; This is just a grain of what STL can do&hellip;. :)</p>
+
+<p>References:</p>
+
+<p><a href="http://www.cs.brown.edu/~jak/proglang/cpp/stltut/tut.html"><a href="http://www.cs.brown.edu/~jak/proglang/cpp/stltut/tut.html">http://www.cs.brown.edu/~jak/proglang/cpp/stltut/tut.html</a></a></p>
+
+<p><a href="http://www.cplusplus.com/reference/algorithm/"><a href="http://www.cplusplus.com/reference/algorithm/">http://www.cplusplus.com/reference/algorithm/</a></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I had a problem]]></title>
+    <link href="http://saiprasad.me/blog/2009/12/i-had-a-problem/"/>
+    <updated>2009-12-01T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2009/12/i-had-a-problem</id>
+    <content type="html"><![CDATA[<h2>Symptoms:</h2>
+
+<ul>
+<li>Language: C++</li>
+<li>Operating System: Windows</li>
+<li>Target Audience: Programmers</li>
+<li>Sub Area: Reading ASCII / UTF-8 files from the disk using C++ streams.</li>
+<li>Trouble: How to handle files whose file names contains non-ASCII characters?? (coz ifstream takes a ASCII file path :&ndash;( )</li>
+</ul>
+
+
+<h2>Solution:</h2>
+
+<ul>
+<li>Use <code>_wfopen_s()</code>, the safe version of <code>_wfopen()</code>, which takes a wide-character file name &amp; gives a <code>FILE</code> pointer i.e; <code>FILE*</code>.</li>
+<li>Use the obtained <code>FILE*</code> to create a stream, like <code>ifstream in(fp);</code></li>
+<li>We used wide-character file name &amp; are reading the file byte-by-byte (actually, its char). DONE !! :&ndash;)</li>
+</ul>
+
+
+<p>BTW, I got help from <a href="http://bytes.com/topic/net/answers/264598-iostream-question-how-open-unicode-file-name">here</a>! Hope this saves  time for someone out there&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

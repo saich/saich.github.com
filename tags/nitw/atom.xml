@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: nitw | Reflections of a scattered Mind!!]]></title>
+  <link href="http://saiprasad.me/tags/nitw/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-11-04T14:10:26+05:30</updated>
+  <id>http://saiprasad.me/</id>
+  <author>
+    <name><![CDATA[Sai Prasad]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Impressed with myself]]></title>
+    <link href="http://saiprasad.me/blog/2012/05/impressed-with-myself/"/>
+    <updated>2012-05-02T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2012/05/impressed-with-myself</id>
+    <content type="html"><![CDATA[<p><strong>Disclaimer:</strong> Just another personal rant written with sleepy eyes &amp; confused mind (as always). Helps in killing a minute or two of your time (better to kill the time by yourself, rather than allowing it to die by itself, isn&rsquo;t it?)</p>
+
+<p>If you knew me personally, you&rsquo;d certainly remember me complaining that I completely wasted my 4-years of time during my under-graduation. No I&rsquo;m not denying that now.. Its still holds true&hellip; However, like Milton said &ldquo;Every cloud has a silver lining&rdquo;, I realized just a couple of days ago that my college days weren&rsquo;t as worse as I always believed (in terms of learning &amp; profession).</p>
+
+<p>Hmm.. lets see.. What could it be that changed my mind? Some things (which I can share in public), that, well not exactly proud of, but feel-good things I did or happened during those interesting (like that Chinese curse &ndash; May you live in the interesting times) years.</p>
+
+<ul>
+    <li>My first semi-serious PHP site, self-learning, and doing all things by myself (design, backend, security, database etc.) came out pretty well than I expected. Site is archived <a href="http://2008.tapsnitw.org/">here</a>. (Well, thanks to CodeIgniter for making a lot of stuff easier :) )</li>
+    <li>Again PHP, a complete rewrite of the above site using Kohana &amp; a fresh new design.. Actually, I copied basic idea of UI from IITB's Techfest site (maybe, 2008), changed the color theme, changed &amp; improved few elements, but I still consider it my best UI design yet (apart, from the top banner &amp; menu). And the best part - the <a href="http://www.tapsnitw.org/">site</a> is still in use actively (since 2008).</li>
+    <li>Breaking into Technozion site (NIT, Warangal's Technical fest) and worse, I kind of defaced it. Did things like changing the password's of all accounts once in every few hours, modifying database records of some particular users etc. (Thanks to some simple SQL injections). It was really fun, but I realized lately it wasn't very moral thing to do. (actually, I passed the vulnerability info their web team, but they fixed it only partially, which kind of drove me crazy to do all that stuff).</li>
+    <li>Thanks to <a href="https://twitter.com/sumit_bindal">@sumit_bindal</a> for reminding me how much I used to enjoy the puzzles on <a href="https://www.hackthissite.org">hackthissite.org</a>. I used to spend my free-time on this site very much &amp; certainly gave me a new angle of thought while writing code. Maybe, I should start again on those puzzles &amp; see where I stand today...</li>
+    <li>It certainly feels good when you are only the one who solved the problem (with correct answer) in your lab exam. Doesn't it? Thankfully, it was open-book exam, or else who would remember what is meant by articulation points, connected components etc. when you always know Google will help you anytime you need it..</li>
+    <li>B-Tree implementation, which took me some 7 hours, and yet I was really really excited that I could do that... solving the 8-queen problem in my 1st year of C++, without using 8 loops (sadly, I can't think of any solution even today). Credit certainly goes to K.Ramesh for showing that programming is fun, and nothing else.. :). After all, I ended up being "not the worst programmer ever"..</li>
+    <li>Getting a job in the first campus placement company itself. I was shocked, so was the complete college (considering how bad my academics were, and the other students who got selected were the class-toppers of the course). Actually, this became a memory I relish, not because of getting a job, but how awesome it was to fool <a href="https://twitter.com/harikine">@harikine</a> for 2 complete days making him believe I didn't get that job, but everyone else knew the truth... (Trust me, it wasn't easy, but a lot of people helped in hiding it from him..) Certainly a contender for my best moment of my college life...</li>
+</ul>
+
+
+<p>Ouch&hellip; just 7 points&hellip; The silver lining seems to be very slim, but nevertheless, it exists.. And I can even say I&rsquo;m impressed with myself, for the joy of something coming out from what you believe as a black hole&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Parallel Programming Minor Test - I]]></title>
+    <link href="http://saiprasad.me/blog/2008/08/parallel-programming-minor-test-1/"/>
+    <updated>2008-08-30T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2008/08/parallel-programming-minor-test-1</id>
+    <content type="html"><![CDATA[<div style="text-align: left;"><span style="font-weight: bold;">Date :</span> 29.08.2008<br /></div>
+
+
+<div style="text-align: center;"><span style="font-weight: bold;">Duration :</span> 40 Minutes<br /></div>
+
+
+<div style="text-align: right;"><span style="font-weight: bold;">Max. Marks :</span> 10<br /></div>
+
+
+<br /><span style="font-weight: bold;">1.</span> Give a CREW PRAM algorithm to merge two sorted lists.<br /><br /><span style="font-weight: bold;">2. </span>Define shuffle and exchange connections in a shuffle-exchange network. Prove that if a shuffle link connects nodes i and j, then j is single-bit left cyclic rotation of i.<br /><br /><span style="font-weight: bold;">3.</span> What is the average number of communication links in the use during Johnsson and Ho's one-to-all broadcast algorithm on the hypercube?
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Dr. APJ Abdul Kalam in Technozion '08]]></title>
+    <link href="http://saiprasad.me/blog/2008/01/dr-apj-abdul-kalam-in-technozion-08/"/>
+    <updated>2008-01-29T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2008/01/dr-apj-abdul-kalam-in-technozion-08</id>
+    <content type="html"><![CDATA[<p>Dr. APJ Abdul Kalam visited our Campus NIT, Warangal (<a href="http://www.nitw.ac.in/"><a href="http://www.nitw.ac.in">http://www.nitw.ac.in</a></a>) on Jan 26th, 2008 on account of Technozion &lsquo;08 the technical fest of NIT, Warangal. Eventhough His stay did not last for much time, that 1:30 hr stay changed alot in NIT, Warangal.</p>
+
+<p>The students who have attended his addressing are all mesmerized for His excellent, inspiring and thought-provoking speech. All the brains of those students started working in the right direction following his speech. Students started studying seriously instead of playing AOE, CS and watching moivies. They all are enlightened by His words. Hope this enlightment stays longer&hellip;
+The glimpses of His speech can be found <a href="http://www.abdulkalam.com/kalam/jsp/display_content.jsp?menuid=28&amp;menuname=Speeches%20/%20Lectures&amp;linkid=68&amp;linkname=Recent&amp;content=672&amp;columnno=0&amp;starts=0&amp;menu_image=-">here</a>.</p>
+
+<p>HIs Excellency, Dr. APJ Abdul Kalam also interacted with the faculty members of the College. His topic was VISION OF NIT, WARANGAL. He also gave glimpses of INDIA VISION 2020 and the way NITW could drive its students towards that.</p>
+
+<p>I&rsquo;d like to quote a statement from his speech which really inspired me &ndash; &ldquo;The most important part of the education is to imbibe the confidence among the students is the spirit of <strong>“we can do it”</strong>.&rdquo;</p>
+
+<p>His Speech  on &lsquo;Interaction with the Faculty of National Institute of Technology, Warangal&rsquo; can be found <a href="http://www.abdulkalam.com/kalam/jsp/display_content.jsp?menuid=28&amp;menuname=Speeches%20/%20Lectures&amp;linkid=68&amp;linkname=Recent&amp;content=673&amp;columnno=0&amp;starts=0&amp;menu_image=-">here</a>.
+Hope to see more Kalams' in the future&hellip;</p>
+
+<p>Good Day,<br/>
+Sai Prasad</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Technozion '08]]></title>
+    <link href="http://saiprasad.me/blog/2008/01/technozion-08/"/>
+    <updated>2008-01-28T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2008/01/technozion-08</id>
+    <content type="html"><![CDATA[<p>sorry guyz for keeping you waiting for almost a week time &hellip;&hellip;<br/>
+The last week, it was a complete festive and a busy week for me (along with all in my college), for the wekend was Technozion &lsquo;08 the Annual Technical Fest of NIT, Warangal&hellip;.
+The most important event for TZ '08 was the visit of the Dr. APJ Abdul Kalam to our college&hellip;
+This visit was the main factor to attract large masses of people towards participating in TZ'08 making it a big success&hellip;&hellip;</p>
+
+<p>But, coming to my point of view, TZ'08 doesn&rsquo;t deserve it.. The TZ website (<a href="http://www.technozion.org/">http://www.technozion.org/</a>) couldn&rsquo;t be worse in any dimension. No event was upto the point of excellence and couldn&rsquo;t reach the expectations.</p>
+
+<p>But this time, the accommodation and other facilities provided to the visitors was far better compared to the last year &hellip;.<br/>
+Anyways, the TZ is finished for this year and the organization of the fest for the next year is in our batch&rsquo;s hand&hellip; Hope we do better &hellip;. : &ndash;)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[1/2 Results: Am I dreaming??]]></title>
+    <link href="http://saiprasad.me/blog/2006/05/12-results-am-i-dreaming/"/>
+    <updated>2006-05-04T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2006/05/12-results-am-i-dreaming</id>
+    <content type="html"><![CDATA[<p><img src="/images/HappyBear.jpg" title="Happy Bear" alt="Happy Bear" /></p>
+
+<p>I couldn&rsquo;t believe my eyes seeing that grade report of mine&hellip; I was not at all expecting those things.. those &lsquo;A&rsquo; Grades in Mathematics-II and Engineering Mechanics, &lsquo;Not F&rsquo; in Basic Mechanical Science&hellip;..</p>
+
+<p>When my friend Krishna called me 5 days ago and said my grades,I did not really believe him&hellip; I thought he was just kidding (Sorry Krishna! Never mind it!). My thought strengthened when I went to net to check out the results on my own but found no results&hellip;</p>
+
+<p>But, a question is arising in my mind (better say, heart): Do I deserve those grades for the things I learnt?? ( They r too little).. Is there any student in our college who deserves the grades he obtained?.. Is this the kind of education we get in such a prestigious college??</p>
+
+<p>Yes, this lenient kind of valuating the student&rsquo;s brains(also their future) should not be followed. Else, our society could never move forward &amp; our students won&rsquo;t get what they deserve&hellip;..</p>
+]]></content>
+  </entry>
+  
+</feed>

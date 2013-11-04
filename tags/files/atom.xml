@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: files | Reflections of a scattered Mind!!]]></title>
+  <link href="http://saiprasad.me/tags/files/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-11-04T14:10:26+05:30</updated>
+  <id>http://saiprasad.me/</id>
+  <author>
+    <name><![CDATA[Sai Prasad]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[I had a problem]]></title>
+    <link href="http://saiprasad.me/blog/2009/12/i-had-a-problem/"/>
+    <updated>2009-12-01T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2009/12/i-had-a-problem</id>
+    <content type="html"><![CDATA[<h2>Symptoms:</h2>
+
+<ul>
+<li>Language: C++</li>
+<li>Operating System: Windows</li>
+<li>Target Audience: Programmers</li>
+<li>Sub Area: Reading ASCII / UTF-8 files from the disk using C++ streams.</li>
+<li>Trouble: How to handle files whose file names contains non-ASCII characters?? (coz ifstream takes a ASCII file path :&ndash;( )</li>
+</ul>
+
+
+<h2>Solution:</h2>
+
+<ul>
+<li>Use <code>_wfopen_s()</code>, the safe version of <code>_wfopen()</code>, which takes a wide-character file name &amp; gives a <code>FILE</code> pointer i.e; <code>FILE*</code>.</li>
+<li>Use the obtained <code>FILE*</code> to create a stream, like <code>ifstream in(fp);</code></li>
+<li>We used wide-character file name &amp; are reading the file byte-by-byte (actually, its char). DONE !! :&ndash;)</li>
+</ul>
+
+
+<p>BTW, I got help from <a href="http://bytes.com/topic/net/answers/264598-iostream-question-how-open-unicode-file-name">here</a>! Hope this saves  time for someone out there&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

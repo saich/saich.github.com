@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: addons | Reflections of a scattered Mind!!]]></title>
+  <link href="http://saiprasad.me/tags/addons/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-11-04T14:10:26+05:30</updated>
+  <id>http://saiprasad.me/</id>
+  <author>
+    <name><![CDATA[Sai Prasad]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Firefox Addons: Little Housekeeping Tips]]></title>
+    <link href="http://saiprasad.me/blog/2011/03/firefox-addons-little-housekeeping-tips/"/>
+    <updated>2011-03-26T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2011/03/firefox-addons-little-housekeeping-tips</id>
+    <content type="html"><![CDATA[<p>I&rsquo;m working on a Firefox addon in the last few weeks and this is my 1st experience with Firefox addons. During my tiny experience, I came across some of those little things that helps you when you&rsquo;re in trouble &amp; here I&rsquo;m writing about those simple tips. Of course, I mixed some changes in Gecko 2.0 also along with these&hellip;.</p>
+
+<p>I know these are very basic, and almost everyone who worked on the addons might be knowing them, but hey, didn&rsquo;t I mention you that this is my first encounter with building firefox addon?</p>
+
+<h3>How can I be sure if a Binary XPCOM component is loaded / attempted to load from Firefox?</h3>
+
+<p>Close all Firefox windows and run the following from command line:
+<code>
+set NSPR_LOG_MODULES=all:5  
+set NSPR_LOG_FILE=c:\ff.log  
+C:\Program Files\Mozilla Firefox\firefox.exe  
+</code></p>
+
+<p>What does it do? Line 1 sets the modules to load &amp; the log level. In the above commands, we are asking to log all modules with log level 5 (meaning all logs). Line 2 sets the path to log file. Now, just launch the Firefox from command line (so that the variables are set)</p>
+
+<p>Troubleshooting Tip: Do not use quotes around the log file name, like <code>set NSPR_LOG_FILE="C:\ff.log"</code>. I tried it the 1st time and it doesn&rsquo;t work.</p>
+
+<p>References: <a title="MDC: Troubleshooting XPCOM components registration" href="https://developer.mozilla.org/en/Troubleshooting_XPCOM_components_registration">Troubleshooting XPCOM components registration</a>, <a title="NSPR Reference: Logging" href="http://www.mozilla.org/projects/nspr/reference/html/prlog.html">NSPR Logging</a></p>
+
+<h3>How can I sure if an XPCOM component is successfully registered?</h3>
+
+<p>This works for both binary &amp; JS components.</p>
+
+<p>Enable Chrome errors in Error Console, if you haven&rsquo;t done already! To enable, set <code>javascript.options.showInConsole</code> to <code>true</code> in <code>about:config</code> preferences.</p>
+
+<p>Open Error Console (Ctrl+Shift+J)</p>
+
+<p>Evaluate <code>Components.classes["components-contract-id"].name</code>. Use with the components' contract id.</p>
+
+<p>If it gives no error, the component is successfully registered.</p>
+
+<p>References:  <a href="http://kb.mozillazine.org/Javascript.options.showInConsole">javascript.options.showInConsole</a>,  <a title="MDC: Troubleshooting XPCOM components registration" href="https://developer.mozilla.org/en/Troubleshooting_XPCOM_components_registration">Troubleshooting XPCOM components registration</a></p>
+
+<h3>How to log errors from the XPCOM components?</h3>
+
+<p>This is simple thing, and I realized a bit late about it. This is currently how I&rsquo;m debugging my components (need to see if there is a better way). You can report error messages to the Error Console with:</p>
+
+<p>```</p>
+
+<pre><code>Components.utils.reportError("This is the description of the error");
+</code></pre>
+
+<p>```</p>
+
+<p>References: <a title="Error Console - MDC Doc Center" href="https://developer.mozilla.org/en/Error_Console">Error Console</a></p>
+
+<h3>nsIConsoleService</h3>
+
+<p>The inconvenience with the reportError API is that it logs all messages as errors. To log at various levels (debug / warning / info), we can use the <code>nsIConsoleService</code>. The <code>logStringMessage()</code> function of this service looks very handy.</p>
+
+<p>I haven&rsquo;t used it yet, so I cannot give any more information on this!</p>
+
+<p>References: <a title="nsIConsoleService Documentation on MDC" href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIConsoleService">nsIConsoleService Reference</a></p>
+
+<h3>UnPack option</h3>
+
+<p>If you are using binary components in the addon, you MUST set the unpack value to true in <code>install.rdf</code> file.</p>
+
+<p>References: <a href="https://developer.mozilla.org/en/Install_Manifests#unpack">unpack in Install Manifests</a></p>
+
+<h3>Bootstrap Addons</h3>
+
+<p>This feature introduced in Gecko 2.0 answers one of my long-time questions &ndash; <em>Why should I restart the browser everytime I add / update / disable / remove an addon?</em></p>
+
+<p>Though this feature is good, it looks complicated to do all the manual work. I&rsquo;ve skipped trying this feature for now, but I&rsquo;ll look into this some other time.</p>
+
+<p>References: <a href="https://developer.mozilla.org/en/Extensions/Bootstrapped_extensions">Bootstrapped Extensions</a></p>
+
+<h3>Gecko 2.0 XPCOM Changes</h3>
+
+<p>Though there are many changes, I&rsquo;m listing the few which I came across.</p>
+
+<ul>
+<li>Javascript component must export <code>NSGetFactory()</code> instead of <code>NSGetModule()</code> function. Binary component must export <code>NSModule()</code> instead of <code>NSGetModule()</code> function. I&rsquo;ve explained this in detail in the next section.</li>
+<li>Components in components/ folder are no longer auto-registered &amp; auto-loaded.Components registration will be done through the manifest file.</li>
+<li>Category Registrations are done through manifest file. Also, category names are modified.</li>
+<li>You&rsquo;ll have to use the XULRunner SDK 2.0 for Gecko 2.0</li>
+</ul>
+
+
+<p>Troubleshooting Tip: Use the sample CPP file (from the references) to get started for binary components. I got a few compilation errors initially, and then I has to add <code>MOZ_NO_MOZALLOC</code> to preprocessor definitions as read somewhere, and it worked..</p>
+
+<p>References: <a title="XPCOM Changes in Gecko 2.0" href="https://developer.mozilla.org/en/XPCOM/XPCOM_changes_in_Gecko_2.0">XPCOM Changes in Gecko 2.0</a>, <a href="http://mxr.mozilla.org/mozilla-central/source/xpcom/sample/nsSampleModule.cpp">nsSampleModule.cpp source code</a></p>
+
+<h3>Component Registration in Firefox 4.0</h3>
+
+<p>All the components to be registered has to mentioned in the <code>chrome.manifest</code> file.</p>
+
+<ul>
+<li>All the interfaces (xpt files) are to be registered using <code>interfaces</code> command.</li>
+<li>A JS component must use <code>component</code> command. It needs to mention its class id also. The contract id can be assigned to this JS component by a separate <code>contract</code> command.</li>
+<li>A binary component can be registered with <code>binary-component</code> command. A binary component registration need not specify any class-id or contract-id in the manifest file, since they are available through the exported <code>NSModule()</code> function.</li>
+</ul>
+
+
+<p>References: <a href="https://developer.mozilla.org/en/Chrome_Registration">Chrome Registration</a></p>
+
+<p>If you have felt all the content is copied from somewhere, its ok because its true. I&rsquo;ve learned many things from <a title="Mozilla Developer Center" href="https://developer.mozilla.org">MDC</a> itself, I&rsquo;m just aggregating those things here!!</p>
+
+<p>If I&rsquo;ve got something wrong in here, please do mention them in the comments as I have to correct them in the post as well as in my mind&hellip;</p>
+]]></content>
+  </entry>
+  
+</feed>

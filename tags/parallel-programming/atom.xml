@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: parallel-programming | Reflections of a scattered Mind!!]]></title>
+  <link href="http://saiprasad.me/tags/parallel-programming/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-11-04T14:10:26+05:30</updated>
+  <id>http://saiprasad.me/</id>
+  <author>
+    <name><![CDATA[Sai Prasad]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Parallel Programming Minor Test - I]]></title>
+    <link href="http://saiprasad.me/blog/2008/08/parallel-programming-minor-test-1/"/>
+    <updated>2008-08-30T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2008/08/parallel-programming-minor-test-1</id>
+    <content type="html"><![CDATA[<div style="text-align: left;"><span style="font-weight: bold;">Date :</span> 29.08.2008<br /></div>
+
+
+<div style="text-align: center;"><span style="font-weight: bold;">Duration :</span> 40 Minutes<br /></div>
+
+
+<div style="text-align: right;"><span style="font-weight: bold;">Max. Marks :</span> 10<br /></div>
+
+
+<br /><span style="font-weight: bold;">1.</span> Give a CREW PRAM algorithm to merge two sorted lists.<br /><br /><span style="font-weight: bold;">2. </span>Define shuffle and exchange connections in a shuffle-exchange network. Prove that if a shuffle link connects nodes i and j, then j is single-bit left cyclic rotation of i.<br /><br /><span style="font-weight: bold;">3.</span> What is the average number of communication links in the use during Johnsson and Ho's one-to-all broadcast algorithm on the hypercube?
+
+]]></content>
+  </entry>
+  
+</feed>

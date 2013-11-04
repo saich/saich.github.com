@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: My Experiences | Reflections of a scattered Mind!!]]></title>
+  <link href="http://saiprasad.me/blog/categories/my-experiences/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-11-04T14:10:26+05:30</updated>
+  <id>http://saiprasad.me/</id>
+  <author>
+    <name><![CDATA[Sai Prasad]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Impressed with myself]]></title>
+    <link href="http://saiprasad.me/blog/2012/05/impressed-with-myself/"/>
+    <updated>2012-05-02T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2012/05/impressed-with-myself</id>
+    <content type="html"><![CDATA[<p><strong>Disclaimer:</strong> Just another personal rant written with sleepy eyes &amp; confused mind (as always). Helps in killing a minute or two of your time (better to kill the time by yourself, rather than allowing it to die by itself, isn&rsquo;t it?)</p>
+
+<p>If you knew me personally, you&rsquo;d certainly remember me complaining that I completely wasted my 4-years of time during my under-graduation. No I&rsquo;m not denying that now.. Its still holds true&hellip; However, like Milton said &ldquo;Every cloud has a silver lining&rdquo;, I realized just a couple of days ago that my college days weren&rsquo;t as worse as I always believed (in terms of learning &amp; profession).</p>
+
+<p>Hmm.. lets see.. What could it be that changed my mind? Some things (which I can share in public), that, well not exactly proud of, but feel-good things I did or happened during those interesting (like that Chinese curse &ndash; May you live in the interesting times) years.</p>
+
+<ul>
+    <li>My first semi-serious PHP site, self-learning, and doing all things by myself (design, backend, security, database etc.) came out pretty well than I expected. Site is archived <a href="http://2008.tapsnitw.org/">here</a>. (Well, thanks to CodeIgniter for making a lot of stuff easier :) )</li>
+    <li>Again PHP, a complete rewrite of the above site using Kohana &amp; a fresh new design.. Actually, I copied basic idea of UI from IITB's Techfest site (maybe, 2008), changed the color theme, changed &amp; improved few elements, but I still consider it my best UI design yet (apart, from the top banner &amp; menu). And the best part - the <a href="http://www.tapsnitw.org/">site</a> is still in use actively (since 2008).</li>
+    <li>Breaking into Technozion site (NIT, Warangal's Technical fest) and worse, I kind of defaced it. Did things like changing the password's of all accounts once in every few hours, modifying database records of some particular users etc. (Thanks to some simple SQL injections). It was really fun, but I realized lately it wasn't very moral thing to do. (actually, I passed the vulnerability info their web team, but they fixed it only partially, which kind of drove me crazy to do all that stuff).</li>
+    <li>Thanks to <a href="https://twitter.com/sumit_bindal">@sumit_bindal</a> for reminding me how much I used to enjoy the puzzles on <a href="https://www.hackthissite.org">hackthissite.org</a>. I used to spend my free-time on this site very much &amp; certainly gave me a new angle of thought while writing code. Maybe, I should start again on those puzzles &amp; see where I stand today...</li>
+    <li>It certainly feels good when you are only the one who solved the problem (with correct answer) in your lab exam. Doesn't it? Thankfully, it was open-book exam, or else who would remember what is meant by articulation points, connected components etc. when you always know Google will help you anytime you need it..</li>
+    <li>B-Tree implementation, which took me some 7 hours, and yet I was really really excited that I could do that... solving the 8-queen problem in my 1st year of C++, without using 8 loops (sadly, I can't think of any solution even today). Credit certainly goes to K.Ramesh for showing that programming is fun, and nothing else.. :). After all, I ended up being "not the worst programmer ever"..</li>
+    <li>Getting a job in the first campus placement company itself. I was shocked, so was the complete college (considering how bad my academics were, and the other students who got selected were the class-toppers of the course). Actually, this became a memory I relish, not because of getting a job, but how awesome it was to fool <a href="https://twitter.com/harikine">@harikine</a> for 2 complete days making him believe I didn't get that job, but everyone else knew the truth... (Trust me, it wasn't easy, but a lot of people helped in hiding it from him..) Certainly a contender for my best moment of my college life...</li>
+</ul>
+
+
+<p>Ouch&hellip; just 7 points&hellip; The silver lining seems to be very slim, but nevertheless, it exists.. And I can even say I&rsquo;m impressed with myself, for the joy of something coming out from what you believe as a black hole&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Square One]]></title>
+    <link href="http://saiprasad.me/blog/2011/10/square-one/"/>
+    <updated>2011-10-16T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2011/10/square-one</id>
+    <content type="html"><![CDATA[<p>You begin at the Square One, you go forward with hopes and dreams, and most importantly with no idea what the future holds for you. You go non-stop until that day comes when completely unexpected happens, and you&rsquo;ll be just thrown out back on to Square One.</p>
+
+<p>You get dejected, depressed and lose all your hopes that everything got ruined. You live in darkness of the past, until one day you say to yourself &ldquo;Enough! You got to get moving&rdquo;&hellip; And, you start moving into that unknown future, with fear still in your mind&hellip;. You try to take one step at a time, but you haven&rsquo;t gotten over your prior experiences. Yet, when you start getting over past and start moving forward with confidence, it happens again! You&rsquo;ll land in the Square One again, now with no knowledge on how, when and why&hellip;.</p>
+
+<p>This time, you begin your journey again into those unknown lands, but instead of fear, this time you have that strange confidence &ndash; &ldquo;Not to fear&hellip; I can get over even if the worse happens again!&rdquo;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[5 Reasons I dislike Flash]]></title>
+    <link href="http://saiprasad.me/blog/2011/06/5-reasons-i-dislike-flash/"/>
+    <updated>2011-06-11T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2011/06/5-reasons-i-dislike-flash</id>
+    <content type="html"><![CDATA[<p>The times have changed to where we spend most of our lives on the web. But, web is far from perfect. It has annoyances lurking around at every corner. Most of the times I get annoyed is because of the bad code (in HTML, CSS, Javascript) by the developers. The next big annoyance is from Flash content, but I can&rsquo;t blame the content developers for their code. Its the design issue of the Flash runtime itself&hellip;</p>
+
+<p>The top 5 things in Flash that annoys me daily:</p>
+
+<ol>
+    <li>Browser shortcuts (like, Ctrl+W, Ctrl+T) do not work when focused on flash elements, since it consumes all the keyboard events. I'd expect it to at least pass them to browser if it doesn't handle a key event, but it doesn't even bother.</li>
+    <li>Zoom doesn't work - Ctrl++, Ctrl+- are useless. You have to read the content in SWF in the published size itself. You cannot increase or decrease it size. :(</li>
+    <li>Middle Click doesn't work - I can't open a link in new tabs. Opening links in new tabs from SWF is a small-size challenge.</li>
+    <li>I can't find the text I'm looking for with Ctrl + F. You can't just search in Flash content, unless the SWF itself contains a search box &amp; search implementation.</li>
+    <li>Its pretty famous &amp; is gonna stay there longer. And the worst part - everyone uses it in their site, though there is absolutely no need for it (making my browsing experience annoying) :(</li>
+</ol>
+
+
+<p>Disclaimer: The above view is completely personal and has absolutely nothing to do with anything (including friends &amp; employer also) else.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[And, I'm back!]]></title>
+    <link href="http://saiprasad.me/blog/2010/06/and-im-back/"/>
+    <updated>2010-06-18T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2010/06/and-im-back</id>
+    <content type="html"><![CDATA[<p>I&rsquo;ve decided that I need to celebrate the release of WordPress 3.0. So, I&rsquo;ve given a thought about the best way to celebrate! And guess what? Using it &amp; spreading the word will the best (both for myself &amp; WordPress too :D). So, I&rsquo;m back to my blog. And this is not like my previous times !!! I&rsquo;m going stick around updating my blog for quite some time (a couple of months, for a minimum).</p>
+
+<p>Let me start with what happened during last few months. Actually, many of them I wish they didn&rsquo;t happen or they happened other way.. :(</p>
+
+<ul>
+    <li>I tried to get a driving license at Noida, but failed because of lack of local address proof. Seriously, going back to my hometown just for getting a license - doesn't it sound stupid?</li>
+    <li>With no license, my dream of a getting a bike got wiped away !</li>
+    <li>I'm getting bored (read as vexed, irritated and so on...) of Noida ! What a stupid place it is !! Isn't it?</li>
+    <li>Laptop is troubling me a lot.... Currently under repair. Wish I get it back soon!</li>
+    <li>Lost all the contacts from the mobile!</li>
+</ul>
+
+
+<p>And the good part: Google I/O 2010 brought back my interest in Web &amp; Mobile development, due to which, I decided to spend atleast 40 hours in the coming couple of months learning Android. I&rsquo;ve also decided Learning is going to my major focus area for a couple more years!!</p>
+
+<p>So, wish me luck in putting things into execution !</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Benefits of Failure]]></title>
+    <link href="http://saiprasad.me/blog/2010/02/the-benefits-of-failure/"/>
+    <updated>2010-02-12T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2010/02/the-benefits-of-failure</id>
+    <content type="html"><![CDATA[<p>This is video of the speech by the famous J.K. Rowling at the Harvard Commencement, 2008.</p>
+
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="302" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://vimeo.com/moogaloop.swf?clip_id=1711302&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed type="application/x-shockwave-flash" width="400" height="302" src="http://vimeo.com/moogaloop.swf?clip_id=1711302&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+
+<p>So, whats in the video?</p>
+
+<ul>
+<li>It has some humor in it, especially the first 150 secs. I&rsquo;m sure a few smiles you&rsquo;d certainly escape from your tender lips.. :P</li>
+<li>She talks how &lsquo;being poor&rsquo; influences (or atleast attempt to) your life and all in it including career, passion etc. etc.</li>
+<li>And the core part &ndash; The benefits of failure. I think she had put this part in action in a great way, or else, after watching this video, why did I desperately want to fail in a big way despite my fear of failure??</li>
+</ul>
+
+
+<p>Now that I mentioned I fear failure, let me tell what my mind tells me right now. &ldquo;You do not fear the failure itself, but your fear its after-effects. Its capable of taking everything fro you !&rdquo;. But my heart is encouraging me &ndash; &ldquo;When you had done everything from scratch, why do you fear to do it again? It&rsquo;d easier this time.. !!&rdquo; :P :P</p>
+
+<p>I know it sounds funny, but really can&rsquo;t help. Perhaps, this is why people call &ndash;</p>
+
+<blockquote><p>An idle brain is the Devil&rsquo;s workshop</p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

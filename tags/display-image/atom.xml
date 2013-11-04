@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: display-image | Reflections of a scattered Mind!!]]></title>
+  <link href="http://saiprasad.me/tags/display-image/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-11-04T14:10:26+05:30</updated>
+  <id>http://saiprasad.me/</id>
+  <author>
+    <name><![CDATA[Sai Prasad]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[GTalk: Display Images Cache]]></title>
+    <link href="http://saiprasad.me/blog/2009/09/gtalk-display-images-cache/"/>
+    <updated>2009-09-17T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2009/09/gtalk-display-images-cache</id>
+    <content type="html"><![CDATA[<p>In my <a title="Display Images in Instant Messengers" href="http://saiprasad.me/blog/2009/08/29/display-images-in-instant-messengers/">last article</a>, I talked about the way of obtaining a user&rsquo;s display image in Yahoo! Messenger &amp; Google Talk, over the internet through http protocol (the browser way). In this case, it is the browser&rsquo;s decision about the cache to be used for those images. But, the IM client Applications(googletalk.exe, YahooMessenger.exe) are stand-alone applications. And we do not expect them to fetch the display image on the fly over the wire from the internet, whenever the image is to be displayed. The most simple, obvious but yet powerful solution is  to maintain the cache of images on the disk.</p>
+
+<p>Now, my point of this article is, what is this cache location of images, so that I can easily navigate over to there and pick a friend&rsquo;s avatar from there..  :&ndash;) Well on Windows Systems, the display images cache directory for GTalk is:<span id="ctl00_MainContentPlaceholder_ctl01_ctl00_lblEntry"> </span></p>
+
+<p>```</p>
+
+<pre><code>C:\Documents and Settings\&lt;windows username&gt;\Local Settings\Application Data\Google\Google Talk\avatars
+</code></pre>
+
+<p>```</p>
+
+<p><span>The images saved in there are PNG files with transparent background, so you can open them with basic image application [maybe, you need to change the application extension to .png]. Do you observe there are two images for each id  there ? One image is 32 x32 [ends with .online.avatar] and the other is 96 x 96 px image [ends with .original.avatar].</span></p>
+
+<p>You can find much more information about GTalk at <a href="http://www.customizetalk.com"><a href="http://www.customizetalk.com">http://www.customizetalk.com</a></a>. This site has some useful information all about the GTalk Themes Development, GTalk Bots Development and many other interesting [and not complicated at the same time] stuff.</p>
+
+<p>Its fun as well as  interesting to find how simple a powerful application can be. Sticking to development basics :)</p>
+
+<p><strong>Update:</strong> Find some interesting Google Talk emoticons &amp; their string equivalents here : <a href="http://tkhere.blogspot.com/2007/12/brand-new-google-chat-emoticons-no-one.html"><a href="http://tkhere.blogspot.com/2007/12/brand-new-google-chat-emoticons-no-one.html">http://tkhere.blogspot.com/2007/12/brand-new-google-chat-emoticons-no-one.html</a></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Display Images in Instant Messengers]]></title>
+    <link href="http://saiprasad.me/blog/2009/08/display-images-in-instant-messengers/"/>
+    <updated>2009-08-29T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2009/08/display-images-in-instant-messengers</id>
+    <content type="html"><![CDATA[<p>Have you ever felt while chatting that your friend&rsquo;s display image is awesome ? If you ever felt so, the most obvious thing you&rsquo;d try to do next is save the image [so that you can use it later on some purpose]. But, in general, the messengers do not support saving the display images [No, you can&rsquo;t just right-click on the menu &amp; select Save]. Well, I just explored &amp; experimented a bit with Google Talk &amp; Yahoo! Messenger to check how to access the display images through an http url? So, here are my results:</p>
+
+<ul>
+    <li>Yahoo! Messenger: The display image of all the users are publicly available on the web. To access the avatar / display image of a user whose Y! Id is <em>yid</em>, then just navigate to:
+http://img.msg.yahoo.com/avatar.php?yids=<em>yid</em><br>
+Here comes a shock now !! All images are publicly available, meaning that everyone has permissions to save your image onto their disk.</li>
+    <li>Google Talk: I'm not really sure where the images get loaded from on GTalk, but on the GTalk plugin available on GMail, the images are loaded from: https://mail.google.com/mail/photos/<em>username</em>@gmail.com, where the <em>username </em>is the user's Google username. On contrary to the Yahoo! Security Settings, these images are NOT publicly available. You cannot access the images of users who are not in your friends list. Also, this URL checks for your valid session, meaning that you need to be logged into GMail to access these images.</li>
+</ul>
+
+
+<p>I was actually wondering if there is any tool which can list me all the data-transfers happening b/w my IMs &amp; the host sites? Wouldn&rsquo;t it be wonderful if we know all the endpoints of an IM server, the message formats etc. [We can probably develop our custom messenger for that IM service, if we get to  know those details :)]</p>
+
+<p>Well, now girls [especially Indians, who are conservative] should give a thought before uploading their display image, if they do not want their pictures to fall into wrong / unwanted hands.</p>
+
+<p>Now, its time to have fun by tricking your pals by their own display images as yours.. :D :D</p>
+]]></content>
+  </entry>
+  
+</feed>

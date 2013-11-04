@@ -1,0 +1,866 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Reflections of a scattered Mind!!</title>
+  <meta name="author" content="Sai Prasad">
+
+  
+  <meta name="description" content="I&rsquo;m working on a Firefox addon in the last few weeks and this is my 1st experience with Firefox addons. During my tiny experience, I came &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://saiprasad.me/blog/page/2">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Reflections of a scattered Mind!!" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Reflections of a scattered Mind!!</a></h1>
+  
+    <h2>"Not all scattered pieces are of broken glass"</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:saiprasad.me" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/firefox-addons-little-housekeeping-tips/">Firefox Addons: Little Housekeeping Tips</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-26T00:00:00+05:30" pubdate data-updated="true">26 March, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;m working on a Firefox addon in the last few weeks and this is my 1st experience with Firefox addons. During my tiny experience, I came across some of those little things that helps you when you&rsquo;re in trouble &amp; here I&rsquo;m writing about those simple tips. Of course, I mixed some changes in Gecko 2.0 also along with these&hellip;.</p>
+
+<p>I know these are very basic, and almost everyone who worked on the addons might be knowing them, but hey, didn&rsquo;t I mention you that this is my first encounter with building firefox addon?</p>
+
+<h3>How can I be sure if a Binary XPCOM component is loaded / attempted to load from Firefox?</h3>
+
+<p>Close all Firefox windows and run the following from command line:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>set NSPR_LOG_MODULES=all:5  
+</span><span class='line'>set NSPR_LOG_FILE=c:\ff.log  
+</span><span class='line'>C:\Program Files\Mozilla Firefox\firefox.exe  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>What does it do? Line 1 sets the modules to load &amp; the log level. In the above commands, we are asking to log all modules with log level 5 (meaning all logs). Line 2 sets the path to log file. Now, just launch the Firefox from command line (so that the variables are set)</p>
+
+<p>Troubleshooting Tip: Do not use quotes around the log file name, like <code>set NSPR_LOG_FILE="C:\ff.log"</code>. I tried it the 1st time and it doesn&rsquo;t work.</p>
+
+<p>References: <a title="MDC: Troubleshooting XPCOM components registration" href="https://developer.mozilla.org/en/Troubleshooting_XPCOM_components_registration">Troubleshooting XPCOM components registration</a>, <a title="NSPR Reference: Logging" href="http://www.mozilla.org/projects/nspr/reference/html/prlog.html">NSPR Logging</a></p>
+
+<h3>How can I sure if an XPCOM component is successfully registered?</h3>
+
+<p>This works for both binary &amp; JS components.</p>
+
+<p>Enable Chrome errors in Error Console, if you haven&rsquo;t done already! To enable, set <code>javascript.options.showInConsole</code> to <code>true</code> in <code>about:config</code> preferences.</p>
+
+<p>Open Error Console (Ctrl+Shift+J)</p>
+
+<p>Evaluate <code>Components.classes["components-contract-id"].name</code>. Use with the components&#8217; contract id.</p>
+
+<p>If it gives no error, the component is successfully registered.</p>
+
+<p>References:  <a href="http://kb.mozillazine.org/Javascript.options.showInConsole">javascript.options.showInConsole</a>,  <a title="MDC: Troubleshooting XPCOM components registration" href="https://developer.mozilla.org/en/Troubleshooting_XPCOM_components_registration">Troubleshooting XPCOM components registration</a></p>
+
+<h3>How to log errors from the XPCOM components?</h3>
+
+<p>This is simple thing, and I realized a bit late about it. This is currently how I&rsquo;m debugging my components (need to see if there is a better way). You can report error messages to the Error Console with:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Components.utils.reportError("This is the description of the error");</span></code></pre></td></tr></table></div></figure>
+
+
+<p>References: <a title="Error Console - MDC Doc Center" href="https://developer.mozilla.org/en/Error_Console">Error Console</a></p>
+
+<h3>nsIConsoleService</h3>
+
+<p>The inconvenience with the reportError API is that it logs all messages as errors. To log at various levels (debug / warning / info), we can use the <code>nsIConsoleService</code>. The <code>logStringMessage()</code> function of this service looks very handy.</p>
+
+<p>I haven&rsquo;t used it yet, so I cannot give any more information on this!</p>
+
+<p>References: <a title="nsIConsoleService Documentation on MDC" href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIConsoleService">nsIConsoleService Reference</a></p>
+
+<h3>UnPack option</h3>
+
+<p>If you are using binary components in the addon, you MUST set the unpack value to true in <code>install.rdf</code> file.</p>
+
+<p>References: <a href="https://developer.mozilla.org/en/Install_Manifests#unpack">unpack in Install Manifests</a></p>
+
+<h3>Bootstrap Addons</h3>
+
+<p>This feature introduced in Gecko 2.0 answers one of my long-time questions &ndash; <em>Why should I restart the browser everytime I add / update / disable / remove an addon?</em></p>
+
+<p>Though this feature is good, it looks complicated to do all the manual work. I&rsquo;ve skipped trying this feature for now, but I&rsquo;ll look into this some other time.</p>
+
+<p>References: <a href="https://developer.mozilla.org/en/Extensions/Bootstrapped_extensions">Bootstrapped Extensions</a></p>
+
+<h3>Gecko 2.0 XPCOM Changes</h3>
+
+<p>Though there are many changes, I&rsquo;m listing the few which I came across.</p>
+
+<ul>
+<li>Javascript component must export <code>NSGetFactory()</code> instead of <code>NSGetModule()</code> function. Binary component must export <code>NSModule()</code> instead of <code>NSGetModule()</code> function. I&rsquo;ve explained this in detail in the next section.</li>
+<li>Components in components/ folder are no longer auto-registered &amp; auto-loaded.Components registration will be done through the manifest file.</li>
+<li>Category Registrations are done through manifest file. Also, category names are modified.</li>
+<li>You&rsquo;ll have to use the XULRunner SDK 2.0 for Gecko 2.0</li>
+</ul>
+
+
+<p>Troubleshooting Tip: Use the sample CPP file (from the references) to get started for binary components. I got a few compilation errors initially, and then I has to add <code>MOZ_NO_MOZALLOC</code> to preprocessor definitions as read somewhere, and it worked..</p>
+
+<p>References: <a title="XPCOM Changes in Gecko 2.0" href="https://developer.mozilla.org/en/XPCOM/XPCOM_changes_in_Gecko_2.0">XPCOM Changes in Gecko 2.0</a>, <a href="http://mxr.mozilla.org/mozilla-central/source/xpcom/sample/nsSampleModule.cpp">nsSampleModule.cpp source code</a></p>
+
+<h3>Component Registration in Firefox 4.0</h3>
+
+<p>All the components to be registered has to mentioned in the <code>chrome.manifest</code> file.</p>
+
+<ul>
+<li>All the interfaces (xpt files) are to be registered using <code>interfaces</code> command.</li>
+<li>A JS component must use <code>component</code> command. It needs to mention its class id also. The contract id can be assigned to this JS component by a separate <code>contract</code> command.</li>
+<li>A binary component can be registered with <code>binary-component</code> command. A binary component registration need not specify any class-id or contract-id in the manifest file, since they are available through the exported <code>NSModule()</code> function.</li>
+</ul>
+
+
+<p>References: <a href="https://developer.mozilla.org/en/Chrome_Registration">Chrome Registration</a></p>
+
+<p>If you have felt all the content is copied from somewhere, its ok because its true. I&rsquo;ve learned many things from <a title="Mozilla Developer Center" href="https://developer.mozilla.org">MDC</a> itself, I&rsquo;m just aggregating those things here!!</p>
+
+<p>If I&rsquo;ve got something wrong in here, please do mention them in the comments as I have to correct them in the post as well as in my mind&hellip;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/03/quotes-i-like-vol-iii/">Quotes I Like:: Vol. III</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-05T00:00:00+05:30" pubdate data-updated="true"> 5 March, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Some random quotes / one-liners, I liked.</p>
+
+<ul>
+    <li>Great minds are always feared by lesser minds</li>
+    <li>&#8230; there&#8217;s a gap between what science knows and what business does (Dan  Pink)</li>
+    <li>All those who wander are not lost.</li>
+    <li>What we have done for ourselves alone dies with us; What we do for others dies with them. What we do for the world is too insignificant to count.</li>
+    <li>Even if an analog clock is broken, it shows correct time at least twice a day.</li>
+    <li>A happy man is not the one who has everything, but who makes most of everything he has.</li>
+    <li>Keep your face to sunshine and you can&#8217;t see the shadows.</li>
+    <li>Make sure the thing you&#8217;re living for is worth dying for.</li>
+    <li>Speaking without egos, Loving without intentions, Caring without  expectations, Praying without selfishness is the sign of True Relation</li>
+    <li>I decided to send you the cutest n sweetest gift of the world. But the postman shouted at me sayin - Get out of the postbox :-)</li>
+    <li>If you don&#8217;t count any of my failures, I&#8217;m quite successful.</li>
+    <li>To live is the rarest thing in the world. Most people exist, that is all.</li>
+    <li>The biggest fools are those who seek an interpretation for everything</li>
+    <li>You&#8217;ll never have a quiet world till you knock the patriotism out of the human race</li>
+</ul>
+
+
+<p>You can find my previous favorite one-liners posts at: <a title="Quotes I like :: Vol. II" href="/blog/2008/09/20/quotes-i-like-vol-ii/">Quotes I like:: Vol. II</a> &amp; <a title="Quotes I like :: Vol. I" href="/blog/2008/08/19/quotes-i-like-vol-i/">Quotes I like:: Vol. I</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/12/debug-php-setup/">Debug PHP: Setup</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-01T00:00:00+05:30" pubdate data-updated="true"> 1 December, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Okay! I forgot how to set up debug for my PHP, so I had trouble today trying to set it up today and had to spend about an hour to do so&hellip; So, I decided I should note it down for future reference and hence I&rsquo;m here now!</p>
+
+<p>Tools: PHPEclipse, PHP 5.3.3, XDebug</p>
+
+<ol>
+<li>Make a PHP file with content as <code>&lt;?php echo phpinfo(); ?&gt;</code> and browse the page on localhost.</li>
+<li>Copy the source of the above page from the browser and paste it in <a href="http://xdebug.org/find-binary.php"><a href="http://xdebug.org/find-binary.php">http://xdebug.org/find-binary.php</a></a> and click &ldquo;Analyze my phpinfo() output&rdquo;. This step will give you tailored instructions on how to setup, especially points to the right DLL to use.</li>
+<li>Be careful with the editing <code>php.ini</code> file. Prefer to add the zend_extension line at the top of the file (It doesn&rsquo;t work if its the last line).</li>
+<li>And start debugging from the Eclipse IDE !!</li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/09/c-quickies-i-long-live-the-stl/">C++ Quickies #I : Long Live the STL</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-09-19T00:00:00+05:30" pubdate data-updated="true">19 September, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Its been quite some time (16+ months) I&rsquo;ve been out of college and started using STL. Trust me, I didn&rsquo;t know much about STL in college, though I used std::string &amp; std::vector everywhere I could. Now, it seems like I couldn&rsquo;t (wouldn&rsquo;t ?) write a program without using STL at all. A few snippets that I really found useful (and simple) and I regularly use where ever possible.</p>
+
+<p>To output the elements (all / subset) in a container (lets say vector), separated by a delimiter, say new line:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#include &lt;algorithm&gt;
+</span><span class='line'>std::copy(v.begin(), v.end(), std::ostream_iterator(std::cout, "\n"));</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Want to sort an array? No problem &hellip; :)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#include &lt;algorithm&gt;
+</span><span class='line'>std::sort(array, array + lengthOfArray);</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Read from the standard input into a vector until the end-of-stream?</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#include &lt;algorithm&gt;
+</span><span class='line'>#include &lt;iterator&gt;
+</span><span class='line'>#include &lt;vector&gt;
+</span><span class='line'>
+</span><span class='line'>typedef std::istream_iterator&lt;int&gt; istream_iterator_int;
+</span><span class='line'>std::vector&lt;int&gt; v;
+</span><span class='line'>istream_iterator_int start (std::cin);
+</span><span class='line'>istream_iterator_int end;
+</span><span class='line'>std::back_insert_iterator&lt;vector&lt;int&gt; &gt; dest (v);
+</span><span class='line'>std::copy (start, end, dest);
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Count the no. of instances an object is found?</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#include &lt;algorithm&gt;
+</span><span class='line'>size_t count = std::count(v.begin(), v.end(), 42); // Returns no. of elements in v with value 42.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And let me inform you&hellip; This is just a grain of what STL can do&hellip;. :)</p>
+
+<p>References:</p>
+
+<p><a href="http://www.cs.brown.edu/~jak/proglang/cpp/stltut/tut.html"><a href="http://www.cs.brown.edu/~jak/proglang/cpp/stltut/tut.html">http://www.cs.brown.edu/~jak/proglang/cpp/stltut/tut.html</a></a></p>
+
+<p><a href="http://www.cplusplus.com/reference/algorithm/"><a href="http://www.cplusplus.com/reference/algorithm/">http://www.cplusplus.com/reference/algorithm/</a></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/08/just-friends-it-got-something/">Just Friends! It Got Something !!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-08-06T00:00:00+05:30" pubdate data-updated="true"> 6 August, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you&rsquo;re wondering what it is, &lsquo;<a href="http://sumritshahi.weebly.com/index.html" target="_blank">Just Friends</a>&rsquo; is a novel by an Indian writer. I think it is his debut novel, but don&rsquo;t take my word on this. You need to google (or bing, for Bing fans) it to be sure. By &lsquo;It got something&rsquo;, I don&rsquo;t mean to say, its an awesome book. I wouldn&rsquo;t even say its a good book, its just another book (add some 18+ masala content to the recipe) . What impressed me in the book are the quotes (quoted by the author himself, I believe) in it. They are not inspirational or something, but I liked them (not that I like only inspirational, in general). So, I decided to put my favorites here and share with you.</p>
+
+<ul>
+    <li>Sleep is deadly and love is lethal. The combination is so powerful that it leaves you helpless, forcing you to sleep later.</li>
+    <li>A sleepless night is a lover&#8217;s right</li>
+    <li>Restless nights, drowsy mornings, confused afternoons, lonely evenings&#8230;</li>
+    <li>Eyes are like prostitutes - they reveal more than they can conceal.</li>
+    <li>I laughed, she laughed. Problem solved.</li>
+    <li>I smiled, she smiled. All problems could wait.</li>
+    <li>You pose a great competition to sugar for its characteristics of deadly sweetness and mixing quickly and easily in unknown waters.</li>
+    <li>I wasn&#8217;t superstitious. It was just&#8230; love.</li>
+</ul>
+
+
+<p>In case they don&rsquo;t make sense to you, you need to read the novel then coz they all are situational, though you can identify the situations from the statements itself for many of them.</p>
+
+<p>Until next post, have a peaceful life (great would be great, though)&hellip;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/07/learning-android-part-one/">Learning Android: Part I</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-07-22T00:00:00+05:30" pubdate data-updated="true">22 July, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I will use this post to talk about my &lsquo;Getting familiar with Android&rsquo; learning. As announced in the last post, I&rsquo;ve started learning Android, but not even at half-pace as I wanted to.</p>
+
+<p>Anyways, let me tell what I&rsquo;m doing in learning. I&rsquo;m using ADT on Eclipse Helios and using the Emulator for testing purposes. Currently focusing on the samples present along with Android SDK. Gone through the Application Fundamentals available along with the SDK.</p>
+
+<p>Interesting Things:</p>
+
+<ul>
+    <li>Most importantly, its good to see myself learning the things I&#8217;m interested in from the start (FYI, I always have that thing for Web &amp; Mobile Development)</li>
+    <li>Very clear &amp; highly helpful documentation (and, also downloadable). And the docs are developer-focused &amp; also lays emphasis on good practices at every step, like i18n, using resources instead of hard-coded strings etc. etc..</li>
+    <li>Separation of layout of the app and the application logic (supports XML files for layout). I get the feeling this is inspired from Flex (mxml &amp; as), but I don&#8217;t know.</li>
+    <li>Provides a very good mechanisms for interoperability between various applications. Simply said, I can use the capabilities of other applications installed, and also I can expose my app&#8217;s capabilities to other apps. Also, Android search also integrates good with any application&#8217;s search.</li>
+    <li>Application Development is done in Java, which is said to be a very developer-friendly. I can utilize this to brush my skills in java, as I have other plans to work in Java in some not-so-far future.</li>
+</ul>
+
+
+<p>Annoying Things:</p>
+
+<ul>
+    <li>Tabs are NOT simple to use. I&#8217;d prefer a way to declare tabs and its contents in the XML itself.</li>
+    <li>In TabHost, mandatory referencing of elements to&#8217; tabs&#8217; &amp; &#8216;tabcontent&#8217; doesn&#8217;t look like a good programming feature.</li>
+    <li>Missing the tabs &amp; tabcontent id referencing in the TabHost would give no error / warning by Compiler, but fails at Runtime, without any proper information (even while debugging)</li>
+    <li>Emulator takes very long time to start. So, its preferred not to close the emulator after every run. (start along with eclipse and close it before closing eclipse)</li>
+    <li>Emulator keyboard shortcuts - Not too easy to remember (like, Ctrl + F12 for Toggle Portrait / Landscape modes). I&#8217;d have preferred if the emulator itself has a help button, to show the shortcuts.</li>
+    <li>Nothing to do with Android, but the bug in Helios (Eclipse Web tools plug-in) has become a pain, forcing me not to us any features while editing resources. Bug - https://bugs.eclipse.org/bugs/show-bug.cgi?id=318108</li>
+    <li>Again, may not be related to ADT (frankly, I don&#8217;t know), but the auto-complete context is very slow, taking 30-60 seconds (which is tooooo long, btw). Here again, I&#8217;m forced to disable Auto-Activation of context Assist at &#8216;Window -&gt; Preferences -&gt; Java -&gt; Editor -&gt; Context Assist -&gt; Enable Auto Activation&#8217;</li>
+    <li>I  can&#8217;t run the application when my focus is on layout files (on resource files, for that matter). I always need to switch to a java file, to run (Ctrl + F11) the application</li>
+    <li>The layout filenames cannot contain uppercase letters. If it contains, the error shown doesn&#8217;t help in identifying it</li>
+</ul>
+
+
+<p>Unclear points for me:</p>
+
+<ul>
+    <li>In Android XML, for TabHost, @android:id/tabhost works ( i.e; referencing other element with tabhost id ). How can access this element from my Activity class? (since, no reference is created in R.id )</li>
+    <li>Is XML compiled ? Or interpreted at Runtime? If compiled, how can I see the generated Java (?) files? (something similar to -keep compiler option in Flash Builder)</li>
+    <li>And many other things (like, working of Intent, i18n, logging), but these are somethings I need to learn as I dive further in android..</li>
+</ul>
+
+
+<p>Tasks for coming days:</p>
+
+<ul>
+    <li>Finish the Tutorials in the resources, and then go to the samples folder available with the SDK.</li>
+    <li>Try to make a couple of simple *usable* apps, so that I get enough practice with the SDK APIs</li>
+</ul>
+
+
+<p>Also, attaching the projects <a title="HelloAndroid.zip" href="/assets/HelloAndroid.zip">HelloAndroid.zip</a> and <a title="HelloViews.zip" href="/assets/HelloViews.zip">HelloViews.zip</a> I made during my learning.</p>
+
+<p>Wish me that I gain pace in learning Android over the next few weeks&hellip;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/06/and-im-back/">And, I&#8217;m Back!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-18T00:00:00+05:30" pubdate data-updated="true">18 June, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&rsquo;ve decided that I need to celebrate the release of WordPress 3.0. So, I&rsquo;ve given a thought about the best way to celebrate! And guess what? Using it &amp; spreading the word will the best (both for myself &amp; WordPress too :D). So, I&rsquo;m back to my blog. And this is not like my previous times !!! I&rsquo;m going stick around updating my blog for quite some time (a couple of months, for a minimum).</p>
+
+<p>Let me start with what happened during last few months. Actually, many of them I wish they didn&rsquo;t happen or they happened other way.. :(</p>
+
+<ul>
+    <li>I tried to get a driving license at Noida, but failed because of lack of local address proof. Seriously, going back to my hometown just for getting a license - doesn&#8217;t it sound stupid?</li>
+    <li>With no license, my dream of a getting a bike got wiped away !</li>
+    <li>I&#8217;m getting bored (read as vexed, irritated and so on&#8230;) of Noida ! What a stupid place it is !! Isn&#8217;t it?</li>
+    <li>Laptop is troubling me a lot&#8230;. Currently under repair. Wish I get it back soon!</li>
+    <li>Lost all the contacts from the mobile!</li>
+</ul>
+
+
+<p>And the good part: Google I/O 2010 brought back my interest in Web &amp; Mobile development, due to which, I decided to spend atleast 40 hours in the coming couple of months learning Android. I&rsquo;ve also decided Learning is going to my major focus area for a couple more years!!</p>
+
+<p>So, wish me luck in putting things into execution !</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2010/02/the-benefits-of-failure/">The Benefits of Failure</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-02-12T00:00:00+05:30" pubdate data-updated="true">12 February, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is video of the speech by the famous J.K. Rowling at the Harvard Commencement, 2008.</p>
+
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="302" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://vimeo.com/moogaloop.swf?clip_id=1711302&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed type="application/x-shockwave-flash" width="400" height="302" src="http://vimeo.com/moogaloop.swf?clip_id=1711302&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+
+<p>So, whats in the video?</p>
+
+<ul>
+<li>It has some humor in it, especially the first 150 secs. I&rsquo;m sure a few smiles you&rsquo;d certainly escape from your tender lips.. :P</li>
+<li>She talks how &lsquo;being poor&rsquo; influences (or atleast attempt to) your life and all in it including career, passion etc. etc.</li>
+<li>And the core part &ndash; The benefits of failure. I think she had put this part in action in a great way, or else, after watching this video, why did I desperately want to fail in a big way despite my fear of failure??</li>
+</ul>
+
+
+<p>Now that I mentioned I fear failure, let me tell what my mind tells me right now. &ldquo;You do not fear the failure itself, but your fear its after-effects. Its capable of taking everything fro you !&rdquo;. But my heart is encouraging me &ndash; &ldquo;When you had done everything from scratch, why do you fear to do it again? It&rsquo;d easier this time.. !!&rdquo; :P :P</p>
+
+<p>I know it sounds funny, but really can&rsquo;t help. Perhaps, this is why people call &ndash;</p>
+
+<blockquote><p>An idle brain is the Devil&rsquo;s workshop</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/12/i-had-a-problem/">I Had a Problem</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-12-01T00:00:00+05:30" pubdate data-updated="true"> 1 December, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2>Symptoms:</h2>
+
+<ul>
+<li>Language: C++</li>
+<li>Operating System: Windows</li>
+<li>Target Audience: Programmers</li>
+<li>Sub Area: Reading ASCII / UTF-8 files from the disk using C++ streams.</li>
+<li>Trouble: How to handle files whose file names contains non-ASCII characters?? (coz ifstream takes a ASCII file path :&ndash;( )</li>
+</ul>
+
+
+<h2>Solution:</h2>
+
+<ul>
+<li>Use <code>_wfopen_s()</code>, the safe version of <code>_wfopen()</code>, which takes a wide-character file name &amp; gives a <code>FILE</code> pointer i.e; <code>FILE*</code>.</li>
+<li>Use the obtained <code>FILE*</code> to create a stream, like <code>ifstream in(fp);</code></li>
+<li>We used wide-character file name &amp; are reading the file byte-by-byte (actually, its char). DONE !! :&ndash;)</li>
+</ul>
+
+
+<p>BTW, I got help from <a href="http://bytes.com/topic/net/answers/264598-iostream-question-how-open-unicode-file-name">here</a>! Hope this saves  time for someone out there&hellip;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2009/10/ask-your-computer-to-help-you-in-household-chores/">Ask Your Computer to Help You in Household Chores</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-22T00:00:00+05:30" pubdate data-updated="true">22 October, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Does this title come as a surprise to you? But, yes ! computer can help you with some additional things too (apart from computing).</p>
+
+<p>With a small program, you can make the cradle (baby rocker) of your baby swing, without your presence. Shocked? Well, do you recognize you PC has a CDROM and also a program can also open &amp; close a CDROM drive?  Continuous opening &amp; closing of CDROM can help in your baby rocker&rsquo;s harmonic motion.</p>
+
+<p>Check this link for similar innovative ideas: <a href="http://blog.makezine.com/archive/2009/08/linux_baby_rocker.html"><a href="http://blog.makezine.com/archive/2009/08/linux_baby_rocker.html">http://blog.makezine.com/archive/2009/08/linux_baby_rocker.html</a></a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/3/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/on-hold/">On Hold</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/what-do-i-regret-the-most/">What Do I Regret the Most?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/recap-of-my-life-the-last-two-weeks/">Recap of My Life: The Last Two Weeks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/this-week-in-my-life/">This Week in My Life</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/impressed-with-myself/">Impressed With Myself</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/saich">@saich</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'saich',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/118016250027747751909?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Sai Prasad -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'saich';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

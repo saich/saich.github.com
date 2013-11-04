@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: intellij-idea | Reflections of a scattered Mind!!]]></title>
+  <link href="http://saiprasad.me/tags/intellij-idea/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-11-04T14:10:26+05:30</updated>
+  <id>http://saiprasad.me/</id>
+  <author>
+    <name><![CDATA[Sai Prasad]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Android : Why I moved away from Eclipse]]></title>
+    <link href="http://saiprasad.me/blog/2011/11/learning-android-why-i-moved-away-from-eclipse/"/>
+    <updated>2011-11-15T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2011/11/learning-android-why-i-moved-away-from-eclipse</id>
+    <content type="html"><![CDATA[<p>So, after a very long break, I started back with getting familiar with Android development&hellip; Felt happy seeing that Google has made a lot of improvements / features in the ADT. But, everything evaporated when I tried to debug an app on my machine, and got this error: &ldquo;Android Packaging Problem: resources.ap_ does not exist&rdquo;. I tried cleaning the project, restarted Eclipse, and re-creating the Eclipse project and this error didn&rsquo;t go away&hellip; Googling it also didn&rsquo;t help much&hellip; Then, I went to sleep&hellip;.</p>
+
+<p>The next day, to my surprise, there was no error and I was able to debug my app, at last&hellip; But, it didn&rsquo;t last long&hellip; After 3 hours, the same error is back&hellip;. It looked like this ADT solves everything else (Resource Editors, WYSIWYG Editor etc.) but the basic task it is supposed to do (Basic compiling / packaging / debugging)&hellip;</p>
+
+<p>Now that perfect mood is set to go hunting for a new and <em>reliable</em> IDE, I searched in <a href="http://www.stackoverflow.com" target="_blank">stackoverflow.com</a> for answers&hellip; Found some thread saying <a href="http://www.jetbrains.com/idea/features/google_android.html" target="_blank">IntelliJ IDEA</a> is good&hellip;. So, downloaded it, downloaded its dependencies (JSDK 1.6) and installed them&hellip; And there is no turning back&hellip; I don&rsquo;t miss the resource.ap_ error at all&hellip;</p>
+
+<p><strong>The Pros of IDEA:</strong></p>
+
+<ol>
+    <li><strong></strong>Reliable (unlike ADT for Eclipse) at compiling and packaging...</li>
+    <li>Supports the Android "Library" projects also... (Tried it with <a href="https://github.com/cyrilmottier/GreenDroid" target="_blank">GreenDroid</a>, and worked without a glitch)</li>
+    <li>Import Eclipse projects directly...</li>
+    <li>Integrated github support (and a few more Version Controls)</li>
+    <li>Decent enough features, for Refactoring, Imports optimization, Code completion etc.</li>
+</ol>
+
+
+<p><strong>The Cons:</strong></p>
+
+<p>This could become a big list, but the reliability when compared to Eclipse beats everything in the below list combined..at least for me&hellip;</p>
+
+<ol>
+    <li>Page Scrolling - Cannot use the Mouse Scroll.. Need to click on scrollbar and scroll it down.. :(</li>
+    <li>Logcat sucks!! The one in Eclipse is hell lot better.. Seriously needs Filter by Application, Colored text based on log level, and saved searches.. A simple textarea doesn't justify such an important feature..</li>
+    <li>The keyboard shortcuts are completely different from Eclipse.. Why doesn't IDEs come with keyboard binding set of other IDEs that user can choose to use? :(</li>
+    <li>Memory hogger, seems to be more than Eclipse.. Could it be because of Swing &amp; Java?</li>
+    <li>Basic XML Editor - There are no Android Resource Editors.... I prefer to write XML files by hand, though...</li>
+    <li>Some code warnings may misguide you.. It keeps telling me that <a href="http://developer.android.com/reference/android/database/Cursor.html" target="_blank">Cursor</a> cannot be NULL, though I have personally seen cases where it will be...</li>
+</ol>
+
+
+<p>In simpler words, IDEA may not be as good as Eclipse in general, but for Android development, it is certainly a better choice&hellip; at least for now..</p>
+
+<p>Atleast, you&rsquo;ll know you are frustrated not because of IDE&hellip; (Trust me, frustration because of an IDE, instead of logic/code isn&rsquo;t even worth trying to know.. )</p>
+]]></content>
+  </entry>
+  
+</feed>

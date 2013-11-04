@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: dojo | Reflections of a scattered Mind!!]]></title>
+  <link href="http://saiprasad.me/tags/dojo/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-11-04T14:10:26+05:30</updated>
+  <id>http://saiprasad.me/</id>
+  <author>
+    <name><![CDATA[Sai Prasad]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Dojo: A Javascript Library]]></title>
+    <link href="http://saiprasad.me/blog/2008/06/dojo-a-javascript-library/"/>
+    <updated>2008-06-07T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2008/06/dojo-a-javascript-library</id>
+    <content type="html"><![CDATA[<p>Been trying to look into <a href="http://dojotoolkit.org">Dojo Toolkit</a> for a few days&hellip; The features are good and I wondered why it wasn&rsquo;t the No.1 ??? But, as days passed, I found a few worse things with that toolkit&hellip;&hellip;<br /><ul><li>It was heavy-weight toolkit.</li><li>It loads all the JS files (summing to 700KB) even though not at all necessary&hellip;</li><li>Requires a high efficient system .. An ordinary system cannot work well Dojo &hellip;<br /></li><li>It takes up all the RAM of the system, hanging the system for a while&hellip;.</li></ul>So, I thought its better to shift to some other toolkit &mdash;&ndash; May be JQUERY is better &hellip;&hellip;<br />Let me try that also&hellip;.<br /><br /><br />Sai Prasad</p>
+]]></content>
+  </entry>
+  
+</feed>

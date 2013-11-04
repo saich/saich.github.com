@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Firefox Addons: Little Housekeeping Tips - Reflections of a scattered Mind!!</title>
+  <meta name="author" content="Sai Prasad">
+
+  
+  <meta name="description" content="I&rsquo;m working on a Firefox addon in the last few weeks and this is my 1st experience with Firefox addons. During my tiny experience, I came &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://saiprasad.me/blog/2011/03/firefox-addons-little-housekeeping-tips">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Reflections of a scattered Mind!!" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Reflections of a scattered Mind!!</a></h1>
+  
+    <h2>"Not all scattered pieces are of broken glass"</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:saiprasad.me" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Firefox Addons: Little Housekeeping Tips</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-26T00:00:00+05:30" pubdate data-updated="true">26 March, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I&rsquo;m working on a Firefox addon in the last few weeks and this is my 1st experience with Firefox addons. During my tiny experience, I came across some of those little things that helps you when you&rsquo;re in trouble &amp; here I&rsquo;m writing about those simple tips. Of course, I mixed some changes in Gecko 2.0 also along with these&hellip;.</p>
+
+<p>I know these are very basic, and almost everyone who worked on the addons might be knowing them, but hey, didn&rsquo;t I mention you that this is my first encounter with building firefox addon?</p>
+
+<h3>How can I be sure if a Binary XPCOM component is loaded / attempted to load from Firefox?</h3>
+
+<p>Close all Firefox windows and run the following from command line:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>set NSPR_LOG_MODULES=all:5  
+</span><span class='line'>set NSPR_LOG_FILE=c:\ff.log  
+</span><span class='line'>C:\Program Files\Mozilla Firefox\firefox.exe  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>What does it do? Line 1 sets the modules to load &amp; the log level. In the above commands, we are asking to log all modules with log level 5 (meaning all logs). Line 2 sets the path to log file. Now, just launch the Firefox from command line (so that the variables are set)</p>
+
+<p>Troubleshooting Tip: Do not use quotes around the log file name, like <code>set NSPR_LOG_FILE="C:\ff.log"</code>. I tried it the 1st time and it doesn&rsquo;t work.</p>
+
+<p>References: <a title="MDC: Troubleshooting XPCOM components registration" href="https://developer.mozilla.org/en/Troubleshooting_XPCOM_components_registration">Troubleshooting XPCOM components registration</a>, <a title="NSPR Reference: Logging" href="http://www.mozilla.org/projects/nspr/reference/html/prlog.html">NSPR Logging</a></p>
+
+<h3>How can I sure if an XPCOM component is successfully registered?</h3>
+
+<p>This works for both binary &amp; JS components.</p>
+
+<p>Enable Chrome errors in Error Console, if you haven&rsquo;t done already! To enable, set <code>javascript.options.showInConsole</code> to <code>true</code> in <code>about:config</code> preferences.</p>
+
+<p>Open Error Console (Ctrl+Shift+J)</p>
+
+<p>Evaluate <code>Components.classes["components-contract-id"].name</code>. Use with the components&#8217; contract id.</p>
+
+<p>If it gives no error, the component is successfully registered.</p>
+
+<p>References:  <a href="http://kb.mozillazine.org/Javascript.options.showInConsole">javascript.options.showInConsole</a>,  <a title="MDC: Troubleshooting XPCOM components registration" href="https://developer.mozilla.org/en/Troubleshooting_XPCOM_components_registration">Troubleshooting XPCOM components registration</a></p>
+
+<h3>How to log errors from the XPCOM components?</h3>
+
+<p>This is simple thing, and I realized a bit late about it. This is currently how I&rsquo;m debugging my components (need to see if there is a better way). You can report error messages to the Error Console with:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Components.utils.reportError("This is the description of the error");</span></code></pre></td></tr></table></div></figure>
+
+
+<p>References: <a title="Error Console - MDC Doc Center" href="https://developer.mozilla.org/en/Error_Console">Error Console</a></p>
+
+<h3>nsIConsoleService</h3>
+
+<p>The inconvenience with the reportError API is that it logs all messages as errors. To log at various levels (debug / warning / info), we can use the <code>nsIConsoleService</code>. The <code>logStringMessage()</code> function of this service looks very handy.</p>
+
+<p>I haven&rsquo;t used it yet, so I cannot give any more information on this!</p>
+
+<p>References: <a title="nsIConsoleService Documentation on MDC" href="https://developer.mozilla.org/en/XPCOM_Interface_Reference/nsIConsoleService">nsIConsoleService Reference</a></p>
+
+<h3>UnPack option</h3>
+
+<p>If you are using binary components in the addon, you MUST set the unpack value to true in <code>install.rdf</code> file.</p>
+
+<p>References: <a href="https://developer.mozilla.org/en/Install_Manifests#unpack">unpack in Install Manifests</a></p>
+
+<h3>Bootstrap Addons</h3>
+
+<p>This feature introduced in Gecko 2.0 answers one of my long-time questions &ndash; <em>Why should I restart the browser everytime I add / update / disable / remove an addon?</em></p>
+
+<p>Though this feature is good, it looks complicated to do all the manual work. I&rsquo;ve skipped trying this feature for now, but I&rsquo;ll look into this some other time.</p>
+
+<p>References: <a href="https://developer.mozilla.org/en/Extensions/Bootstrapped_extensions">Bootstrapped Extensions</a></p>
+
+<h3>Gecko 2.0 XPCOM Changes</h3>
+
+<p>Though there are many changes, I&rsquo;m listing the few which I came across.</p>
+
+<ul>
+<li>Javascript component must export <code>NSGetFactory()</code> instead of <code>NSGetModule()</code> function. Binary component must export <code>NSModule()</code> instead of <code>NSGetModule()</code> function. I&rsquo;ve explained this in detail in the next section.</li>
+<li>Components in components/ folder are no longer auto-registered &amp; auto-loaded.Components registration will be done through the manifest file.</li>
+<li>Category Registrations are done through manifest file. Also, category names are modified.</li>
+<li>You&rsquo;ll have to use the XULRunner SDK 2.0 for Gecko 2.0</li>
+</ul>
+
+
+<p>Troubleshooting Tip: Use the sample CPP file (from the references) to get started for binary components. I got a few compilation errors initially, and then I has to add <code>MOZ_NO_MOZALLOC</code> to preprocessor definitions as read somewhere, and it worked..</p>
+
+<p>References: <a title="XPCOM Changes in Gecko 2.0" href="https://developer.mozilla.org/en/XPCOM/XPCOM_changes_in_Gecko_2.0">XPCOM Changes in Gecko 2.0</a>, <a href="http://mxr.mozilla.org/mozilla-central/source/xpcom/sample/nsSampleModule.cpp">nsSampleModule.cpp source code</a></p>
+
+<h3>Component Registration in Firefox 4.0</h3>
+
+<p>All the components to be registered has to mentioned in the <code>chrome.manifest</code> file.</p>
+
+<ul>
+<li>All the interfaces (xpt files) are to be registered using <code>interfaces</code> command.</li>
+<li>A JS component must use <code>component</code> command. It needs to mention its class id also. The contract id can be assigned to this JS component by a separate <code>contract</code> command.</li>
+<li>A binary component can be registered with <code>binary-component</code> command. A binary component registration need not specify any class-id or contract-id in the manifest file, since they are available through the exported <code>NSModule()</code> function.</li>
+</ul>
+
+
+<p>References: <a href="https://developer.mozilla.org/en/Chrome_Registration">Chrome Registration</a></p>
+
+<p>If you have felt all the content is copied from somewhere, its ok because its true. I&rsquo;ve learned many things from <a title="Mozilla Developer Center" href="https://developer.mozilla.org">MDC</a> itself, I&rsquo;m just aggregating those things here!!</p>
+
+<p>If I&rsquo;ve got something wrong in here, please do mention them in the comments as I have to correct them in the post as well as in my mind&hellip;</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Sai Prasad</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-03-26T00:00:00+05:30" pubdate data-updated="true">26 March, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technical/'>Technical</a>
+  
+</span>
+
+
+      
+
+<span class="tags">
+  
+    <a class='tag' href='/tags/addons/'>addons</a>, <a class='tag' href='/tags/firefox/'>firefox</a>, <a class='tag' href='/tags/xpcom/'>xpcom</a>
+  
+</span>
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://saiprasad.me/blog/2011/03/firefox-addons-little-housekeeping-tips/" data-via="saiprasadch" data-counturl="http://saiprasad.me/blog/2011/03/firefox-addons-little-housekeeping-tips/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/03/quotes-i-like-vol-iii/" title="Previous Post: Quotes I like:: Vol. III">&laquo; Quotes I like:: Vol. III</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/06/5-reasons-i-dislike-flash/" title="Next Post: 5 Reasons I dislike Flash">5 Reasons I dislike Flash &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/on-hold/">On Hold</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/what-do-i-regret-the-most/">What Do I Regret the Most?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/recap-of-my-life-the-last-two-weeks/">Recap of My Life: The Last Two Weeks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/this-week-in-my-life/">This Week in My Life</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/impressed-with-myself/">Impressed With Myself</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/saich">@saich</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'saich',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/118016250027747751909?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Sai Prasad -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'saich';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://saiprasad.me/blog/2011/03/firefox-addons-little-housekeeping-tips/';
+        var disqus_url = 'http://saiprasad.me/blog/2011/03/firefox-addons-little-housekeeping-tips/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

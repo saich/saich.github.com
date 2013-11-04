@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: blog | Reflections of a scattered Mind!!]]></title>
+  <link href="http://saiprasad.me/tags/blog/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-11-04T14:10:26+05:30</updated>
+  <id>http://saiprasad.me/</id>
+  <author>
+    <name><![CDATA[Sai Prasad]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New Domain]]></title>
+    <link href="http://saiprasad.me/blog/2009/07/new-domain/"/>
+    <updated>2009-07-14T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2009/07/new-domain</id>
+    <content type="html"><![CDATA[<p>Hi!!</p>
+
+<p>A post from me after a long time, and this time I&rsquo;ve news to share. I bought a domain name for myself [not a great domain name, though :(]. I found a place to host my site temporarily for a few months.. :)</p>
+
+<p>As can obviously be seen, this is powered by wordpress. I&rsquo;ve taken a bit time to import all my previous entries into this blog [from Blogger, Y! Blog]. In case, u need any help regarding the first step to migrate from blogger to wordpress, I&rsquo;m happy to help you&hellip;</p>
+
+<p>The main purpose to get a domain is: I do not want to lose touch with web development &amp; i wouldn&rsquo;t be laxy if its my OWN domain / site. Now that I&rsquo;ve got a domain for myself, I&rsquo;m planning to host a few small services on my site. Keep looking this blog once in a while. [I suggest to go for the RSS feed].</p>
+
+<p>Looking forward to develop for my site.. :)</p>
+]]></content>
+  </entry>
+  
+</feed>

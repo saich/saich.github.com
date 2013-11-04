@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Learning Android : Why I moved away from Eclipse - Reflections of a scattered Mind!!</title>
+  <meta name="author" content="Sai Prasad">
+
+  
+  <meta name="description" content="So, after a very long break, I started back with getting familiar with Android development&hellip; Felt happy seeing that Google has made a lot of &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://saiprasad.me/blog/2011/11/learning-android-why-i-moved-away-from-eclipse">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Reflections of a scattered Mind!!" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Reflections of a scattered Mind!!</a></h1>
+  
+    <h2>"Not all scattered pieces are of broken glass"</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:saiprasad.me" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Learning Android : Why I Moved Away From Eclipse</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-15T00:00:00+05:30" pubdate data-updated="true">15 November, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>So, after a very long break, I started back with getting familiar with Android development&hellip; Felt happy seeing that Google has made a lot of improvements / features in the ADT. But, everything evaporated when I tried to debug an app on my machine, and got this error: &ldquo;Android Packaging Problem: resources.ap_ does not exist&rdquo;. I tried cleaning the project, restarted Eclipse, and re-creating the Eclipse project and this error didn&rsquo;t go away&hellip; Googling it also didn&rsquo;t help much&hellip; Then, I went to sleep&hellip;.</p>
+
+<p>The next day, to my surprise, there was no error and I was able to debug my app, at last&hellip; But, it didn&rsquo;t last long&hellip; After 3 hours, the same error is back&hellip;. It looked like this ADT solves everything else (Resource Editors, WYSIWYG Editor etc.) but the basic task it is supposed to do (Basic compiling / packaging / debugging)&hellip;</p>
+
+<p>Now that perfect mood is set to go hunting for a new and <em>reliable</em> IDE, I searched in <a href="http://www.stackoverflow.com" target="_blank">stackoverflow.com</a> for answers&hellip; Found some thread saying <a href="http://www.jetbrains.com/idea/features/google_android.html" target="_blank">IntelliJ IDEA</a> is good&hellip;. So, downloaded it, downloaded its dependencies (JSDK 1.6) and installed them&hellip; And there is no turning back&hellip; I don&rsquo;t miss the resource.ap_ error at all&hellip;</p>
+
+<p><strong>The Pros of IDEA:</strong></p>
+
+<ol>
+    <li><strong></strong>Reliable (unlike ADT for Eclipse) at compiling and packaging&#8230;</li>
+    <li>Supports the Android &#8220;Library&#8221; projects also&#8230; (Tried it with <a href="https://github.com/cyrilmottier/GreenDroid" target="_blank">GreenDroid</a>, and worked without a glitch)</li>
+    <li>Import Eclipse projects directly&#8230;</li>
+    <li>Integrated github support (and a few more Version Controls)</li>
+    <li>Decent enough features, for Refactoring, Imports optimization, Code completion etc.</li>
+</ol>
+
+
+<p><strong>The Cons:</strong></p>
+
+<p>This could become a big list, but the reliability when compared to Eclipse beats everything in the below list combined..at least for me&hellip;</p>
+
+<ol>
+    <li>Page Scrolling - Cannot use the Mouse Scroll.. Need to click on scrollbar and scroll it down.. :(</li>
+    <li>Logcat sucks!! The one in Eclipse is hell lot better.. Seriously needs Filter by Application, Colored text based on log level, and saved searches.. A simple textarea doesn&#8217;t justify such an important feature..</li>
+    <li>The keyboard shortcuts are completely different from Eclipse.. Why doesn&#8217;t IDEs come with keyboard binding set of other IDEs that user can choose to use? :(</li>
+    <li>Memory hogger, seems to be more than Eclipse.. Could it be because of Swing &amp; Java?</li>
+    <li>Basic XML Editor - There are no Android Resource Editors&#8230;. I prefer to write XML files by hand, though&#8230;</li>
+    <li>Some code warnings may misguide you.. It keeps telling me that <a href="http://developer.android.com/reference/android/database/Cursor.html" target="_blank">Cursor</a> cannot be NULL, though I have personally seen cases where it will be&#8230;</li>
+</ol>
+
+
+<p>In simpler words, IDEA may not be as good as Eclipse in general, but for Android development, it is certainly a better choice&hellip; at least for now..</p>
+
+<p>Atleast, you&rsquo;ll know you are frustrated not because of IDE&hellip; (Trust me, frustration because of an IDE, instead of logic/code isn&rsquo;t even worth trying to know.. )</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Sai Prasad</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-15T00:00:00+05:30" pubdate data-updated="true">15 November, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technical/'>Technical</a>
+  
+</span>
+
+
+      
+
+<span class="tags">
+  
+    <a class='tag' href='/tags/android/'>android</a>, <a class='tag' href='/tags/eclipse/'>eclipse</a>, <a class='tag' href='/tags/ide/'>ide</a>, <a class='tag' href='/tags/intellij-idea/'>intellij-idea</a>
+  
+</span>
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://saiprasad.me/blog/2011/11/learning-android-why-i-moved-away-from-eclipse/" data-via="saiprasadch" data-counturl="http://saiprasad.me/blog/2011/11/learning-android-why-i-moved-away-from-eclipse/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/10/square-one/" title="Previous Post: Square One">&laquo; Square One</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/05/impressed-with-myself/" title="Next Post: Impressed with myself">Impressed with myself &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/on-hold/">On Hold</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/what-do-i-regret-the-most/">What Do I Regret the Most?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/recap-of-my-life-the-last-two-weeks/">Recap of My Life: The Last Two Weeks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/this-week-in-my-life/">This Week in My Life</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/impressed-with-myself/">Impressed With Myself</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/saich">@saich</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'saich',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/118016250027747751909?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Sai Prasad -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'saich';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://saiprasad.me/blog/2011/11/learning-android-why-i-moved-away-from-eclipse/';
+        var disqus_url = 'http://saiprasad.me/blog/2011/11/learning-android-why-i-moved-away-from-eclipse/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

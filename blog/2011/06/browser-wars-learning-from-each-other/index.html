@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Browser Wars: Learning from each other - Reflections of a scattered Mind!!</title>
+  <meta name="author" content="Sai Prasad">
+
+  
+  <meta name="description" content="The most popular browsers from the country I come from (where Mac is rare) are Google Chrome, Mozilla Firefox &amp; Microsoft Internet Explorer. Like &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://saiprasad.me/blog/2011/06/browser-wars-learning-from-each-other">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Reflections of a scattered Mind!!" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Reflections of a scattered Mind!!</a></h1>
+  
+    <h2>"Not all scattered pieces are of broken glass"</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:saiprasad.me" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Browser Wars: Learning From Each Other</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-18T00:00:00+05:30" pubdate data-updated="true">18 June, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>The most popular browsers from the country I come from (where Mac is rare) are Google Chrome, Mozilla Firefox &amp; Microsoft Internet Explorer. Like any other browser, these all have the same goal &ndash; to make browsing experience richer &amp; better. Yet, there are a lot of differences in their ways and some are better than other in some ways.</p>
+
+<p>If I ever have to make a generic purpose browser, I&rsquo;d certainly pick good (for inclusion) &amp; bad (for exclusion) things from the current browsers.</p>
+
+<h5>Google Chrome:</h5>
+
+
+<p>The recent one and certainly a game changer. It has improved the user expectations from a browser by 100x.</p>
+
+<p><strong>The Good</strong>:</p>
+
+<ul>
+    <li>The crashless browser -  protect the user even from the crashes in external plug-ins (Thankfully, Firefox also implemented out-of-box plugins)</li>
+    <li>Faster startup time - Do things that are only absolutely needed. Nothing more. Defer everything else, to post-startup (in parallel with the user&#8217;s browsing).</li>
+    <li>Sandboxing - Whatever you do on web stays on web. Protect the machine from all the various security issues.</li>
+    <li>Explicit permissions listed for Extensions - user must know what an extension is capable of (despite of what it claims to do)</li>
+    <li>Silent updation: Push updates only when it is good for users. Then, who would say &#8220;no&#8221; to better browsing experience? So, there is no point in showing an annoying dialog &#8220;Updates Available&#8221; when you already know the user clicks &#8220;yes&#8221;.</li>
+    <li>Incognito Mode starts a new session without closing the current session (sadly, Firefox does that)</li>
+</ul>
+
+
+<p><strong>The Bad: </strong></p>
+
+<ul>
+    <li>Weakest &amp; the most limited extension model - So limited that it may give you a feeling that the word &#8220;extension&#8221; doesn&#8217;t suit it.</li>
+    <li>Still an immature platform for developers. Extension Model hasn&#8217;t moved but the other parts (rendering, UI etc.) are moving forward at a very fast pace. Even, many bugs in the chrome extensions are not getting fixed for many months.</li>
+</ul>
+
+
+<h5>Mozilla Firefox</h5>
+
+
+<p><strong>The Good:</strong></p>
+
+<ul>
+    <li>Super cool extension model. There is almost nothing that can&#8217;t be done by the addons. And, XPCOM works across all the platforms.</li>
+    <li>Known to be the developer-friendly browser from long time. One of the early browsers that emphasized on standards and innovation from its early days.</li>
+</ul>
+
+
+<p><strong>The Bad:</strong></p>
+
+<ul>
+    <li>Known to be memory hog. Not efficient at Memory management. Have issues with Intel&#8217;s hyperthreading.</li>
+    <li>MaxVersion in addons is mandatory and is limited to current version (you can&#8217;t just use * for maxversion). The only issue with this is each and every addon is to be updated (you add features or not) with every major version release (which is once in 12 weeks as of now).</li>
+    <li>Private browsing closes the current session and starts a new one. After closing private session, it restores the earlier session. This means you can&#8217;t do both (with default command line options)</li>
+    <li>Every extension have complete control (including a binary component), because of lack of a permission model. You can never trust an extension because of this!</li>
+</ul>
+
+
+<h5>Internet Explorer</h5>
+
+
+<p><strong>The Good:</strong></p>
+
+<ul>
+    <li>Its never late to catch up with the standards, speed &amp; security (with IE 9 &amp; IE 10)</li>
+    <li>Native 64-bit for 64-bit OS. (I can&#8217;t believe Firefox and Chrome do not have them for Windows)</li>
+</ul>
+
+
+<p><strong>The Bad:</strong></p>
+
+<ul>
+    <li>Still maintains the completely idiotic &#8216;Quirks Mode&#8217;. I don&#8217;t see  the greater cause of maintaining a version which is full of bugs,  extremely slow and follows no standards, and also all developers hate  it.</li>
+    <li>Extension Model - Its a big pain. You need to be comfortable  with COM to get started with. Its much comfortable to think addons  don&#8217;t exist at all for this version.</li>
+    <li>Supports ActiveX plugins when the whole world uses NPAPI plugins.</li>
+</ul>
+
+
+<p><em>Disclaimer: All the above are my own thoughts, and I&rsquo;ve to confess I haven&rsquo;t researched every point. So, not all the above may be true, but is to the best of my knowledge.</em></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Sai Prasad</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-18T00:00:00+05:30" pubdate data-updated="true">18 June, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/technical/'>Technical</a>
+  
+</span>
+
+
+      
+
+<span class="tags">
+  
+    <a class='tag' href='/tags/browsers/'>browsers</a>, <a class='tag' href='/tags/chrome/'>chrome</a>, <a class='tag' href='/tags/firefox/'>firefox</a>, <a class='tag' href='/tags/ie/'>ie</a>, <a class='tag' href='/tags/web/'>web</a>
+  
+</span>
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://saiprasad.me/blog/2011/06/browser-wars-learning-from-each-other/" data-via="saiprasadch" data-counturl="http://saiprasad.me/blog/2011/06/browser-wars-learning-from-each-other/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/06/5-reasons-i-dislike-flash/" title="Previous Post: 5 Reasons I dislike Flash">&laquo; 5 Reasons I dislike Flash</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/09/geeks-are-awesome/" title="Next Post: Geeks are awesome!">Geeks are awesome! &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/on-hold/">On Hold</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/what-do-i-regret-the-most/">What Do I Regret the Most?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/recap-of-my-life-the-last-two-weeks/">Recap of My Life: The Last Two Weeks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/this-week-in-my-life/">This Week in My Life</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/impressed-with-myself/">Impressed With Myself</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/saich">@saich</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'saich',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/118016250027747751909?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Sai Prasad -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'saich';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://saiprasad.me/blog/2011/06/browser-wars-learning-from-each-other/';
+        var disqus_url = 'http://saiprasad.me/blog/2011/06/browser-wars-learning-from-each-other/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

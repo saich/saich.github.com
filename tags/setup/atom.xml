@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: setup | Reflections of a scattered Mind!!]]></title>
+  <link href="http://saiprasad.me/tags/setup/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-11-04T14:10:26+05:30</updated>
+  <id>http://saiprasad.me/</id>
+  <author>
+    <name><![CDATA[Sai Prasad]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Debug PHP: Setup]]></title>
+    <link href="http://saiprasad.me/blog/2010/12/debug-php-setup/"/>
+    <updated>2010-12-01T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2010/12/debug-php-setup</id>
+    <content type="html"><![CDATA[<p>Okay! I forgot how to set up debug for my PHP, so I had trouble today trying to set it up today and had to spend about an hour to do so&hellip; So, I decided I should note it down for future reference and hence I&rsquo;m here now!</p>
+
+<p>Tools: PHPEclipse, PHP 5.3.3, XDebug</p>
+
+<ol>
+<li>Make a PHP file with content as <code>&lt;?php echo phpinfo(); ?&gt;</code> and browse the page on localhost.</li>
+<li>Copy the source of the above page from the browser and paste it in <a href="http://xdebug.org/find-binary.php"><a href="http://xdebug.org/find-binary.php">http://xdebug.org/find-binary.php</a></a> and click &ldquo;Analyze my phpinfo() output&rdquo;. This step will give you tailored instructions on how to setup, especially points to the right DLL to use.</li>
+<li>Be careful with the editing <code>php.ini</code> file. Prefer to add the zend_extension line at the top of the file (It doesn&rsquo;t work if its the last line).</li>
+<li>And start debugging from the Eclipse IDE !!</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

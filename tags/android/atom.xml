@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: android | Reflections of a scattered Mind!!]]></title>
+  <link href="http://saiprasad.me/tags/android/atom.xml" rel="self"/>
+  <link href="http://saiprasad.me/"/>
+  <updated>2013-11-04T14:10:26+05:30</updated>
+  <id>http://saiprasad.me/</id>
+  <author>
+    <name><![CDATA[Sai Prasad]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Android : Why I moved away from Eclipse]]></title>
+    <link href="http://saiprasad.me/blog/2011/11/learning-android-why-i-moved-away-from-eclipse/"/>
+    <updated>2011-11-15T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2011/11/learning-android-why-i-moved-away-from-eclipse</id>
+    <content type="html"><![CDATA[<p>So, after a very long break, I started back with getting familiar with Android development&hellip; Felt happy seeing that Google has made a lot of improvements / features in the ADT. But, everything evaporated when I tried to debug an app on my machine, and got this error: &ldquo;Android Packaging Problem: resources.ap_ does not exist&rdquo;. I tried cleaning the project, restarted Eclipse, and re-creating the Eclipse project and this error didn&rsquo;t go away&hellip; Googling it also didn&rsquo;t help much&hellip; Then, I went to sleep&hellip;.</p>
+
+<p>The next day, to my surprise, there was no error and I was able to debug my app, at last&hellip; But, it didn&rsquo;t last long&hellip; After 3 hours, the same error is back&hellip;. It looked like this ADT solves everything else (Resource Editors, WYSIWYG Editor etc.) but the basic task it is supposed to do (Basic compiling / packaging / debugging)&hellip;</p>
+
+<p>Now that perfect mood is set to go hunting for a new and <em>reliable</em> IDE, I searched in <a href="http://www.stackoverflow.com" target="_blank">stackoverflow.com</a> for answers&hellip; Found some thread saying <a href="http://www.jetbrains.com/idea/features/google_android.html" target="_blank">IntelliJ IDEA</a> is good&hellip;. So, downloaded it, downloaded its dependencies (JSDK 1.6) and installed them&hellip; And there is no turning back&hellip; I don&rsquo;t miss the resource.ap_ error at all&hellip;</p>
+
+<p><strong>The Pros of IDEA:</strong></p>
+
+<ol>
+    <li><strong></strong>Reliable (unlike ADT for Eclipse) at compiling and packaging...</li>
+    <li>Supports the Android "Library" projects also... (Tried it with <a href="https://github.com/cyrilmottier/GreenDroid" target="_blank">GreenDroid</a>, and worked without a glitch)</li>
+    <li>Import Eclipse projects directly...</li>
+    <li>Integrated github support (and a few more Version Controls)</li>
+    <li>Decent enough features, for Refactoring, Imports optimization, Code completion etc.</li>
+</ol>
+
+
+<p><strong>The Cons:</strong></p>
+
+<p>This could become a big list, but the reliability when compared to Eclipse beats everything in the below list combined..at least for me&hellip;</p>
+
+<ol>
+    <li>Page Scrolling - Cannot use the Mouse Scroll.. Need to click on scrollbar and scroll it down.. :(</li>
+    <li>Logcat sucks!! The one in Eclipse is hell lot better.. Seriously needs Filter by Application, Colored text based on log level, and saved searches.. A simple textarea doesn't justify such an important feature..</li>
+    <li>The keyboard shortcuts are completely different from Eclipse.. Why doesn't IDEs come with keyboard binding set of other IDEs that user can choose to use? :(</li>
+    <li>Memory hogger, seems to be more than Eclipse.. Could it be because of Swing &amp; Java?</li>
+    <li>Basic XML Editor - There are no Android Resource Editors.... I prefer to write XML files by hand, though...</li>
+    <li>Some code warnings may misguide you.. It keeps telling me that <a href="http://developer.android.com/reference/android/database/Cursor.html" target="_blank">Cursor</a> cannot be NULL, though I have personally seen cases where it will be...</li>
+</ol>
+
+
+<p>In simpler words, IDEA may not be as good as Eclipse in general, but for Android development, it is certainly a better choice&hellip; at least for now..</p>
+
+<p>Atleast, you&rsquo;ll know you are frustrated not because of IDE&hellip; (Trust me, frustration because of an IDE, instead of logic/code isn&rsquo;t even worth trying to know.. )</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning Android: Part I]]></title>
+    <link href="http://saiprasad.me/blog/2010/07/learning-android-part-one/"/>
+    <updated>2010-07-22T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2010/07/learning-android-part-one</id>
+    <content type="html"><![CDATA[<p>I will use this post to talk about my &lsquo;Getting familiar with Android&rsquo; learning. As announced in the last post, I&rsquo;ve started learning Android, but not even at half-pace as I wanted to.</p>
+
+<p>Anyways, let me tell what I&rsquo;m doing in learning. I&rsquo;m using ADT on Eclipse Helios and using the Emulator for testing purposes. Currently focusing on the samples present along with Android SDK. Gone through the Application Fundamentals available along with the SDK.</p>
+
+<p>Interesting Things:</p>
+
+<ul>
+    <li>Most importantly, its good to see myself learning the things I'm interested in from the start (FYI, I always have that thing for Web &amp; Mobile Development)</li>
+    <li>Very clear &amp; highly helpful documentation (and, also downloadable). And the docs are developer-focused &amp; also lays emphasis on good practices at every step, like i18n, using resources instead of hard-coded strings etc. etc..</li>
+    <li>Separation of layout of the app and the application logic (supports XML files for layout). I get the feeling this is inspired from Flex (mxml &amp; as), but I don't know.</li>
+    <li>Provides a very good mechanisms for interoperability between various applications. Simply said, I can use the capabilities of other applications installed, and also I can expose my app's capabilities to other apps. Also, Android search also integrates good with any application's search.</li>
+    <li>Application Development is done in Java, which is said to be a very developer-friendly. I can utilize this to brush my skills in java, as I have other plans to work in Java in some not-so-far future.</li>
+</ul>
+
+
+<p>Annoying Things:</p>
+
+<ul>
+    <li>Tabs are NOT simple to use. I'd prefer a way to declare tabs and its contents in the XML itself.</li>
+    <li>In TabHost, mandatory referencing of elements to' tabs' &amp; 'tabcontent' doesn't look like a good programming feature.</li>
+    <li>Missing the tabs &amp; tabcontent id referencing in the TabHost would give no error / warning by Compiler, but fails at Runtime, without any proper information (even while debugging)</li>
+    <li>Emulator takes very long time to start. So, its preferred not to close the emulator after every run. (start along with eclipse and close it before closing eclipse)</li>
+    <li>Emulator keyboard shortcuts - Not too easy to remember (like, Ctrl + F12 for Toggle Portrait / Landscape modes). I'd have preferred if the emulator itself has a help button, to show the shortcuts.</li>
+    <li>Nothing to do with Android, but the bug in Helios (Eclipse Web tools plug-in) has become a pain, forcing me not to us any features while editing resources. Bug - https://bugs.eclipse.org/bugs/show-bug.cgi?id=318108</li>
+    <li>Again, may not be related to ADT (frankly, I don't know), but the auto-complete context is very slow, taking 30-60 seconds (which is tooooo long, btw). Here again, I'm forced to disable Auto-Activation of context Assist at 'Window -&gt; Preferences -&gt; Java -&gt; Editor -&gt; Context Assist -&gt; Enable Auto Activation'</li>
+    <li>I  can't run the application when my focus is on layout files (on resource files, for that matter). I always need to switch to a java file, to run (Ctrl + F11) the application</li>
+    <li>The layout filenames cannot contain uppercase letters. If it contains, the error shown doesn't help in identifying it</li>
+</ul>
+
+
+<p>Unclear points for me:</p>
+
+<ul>
+    <li>In Android XML, for TabHost, @android:id/tabhost works ( i.e; referencing other element with tabhost id ). How can access this element from my Activity class? (since, no reference is created in R.id )</li>
+    <li>Is XML compiled ? Or interpreted at Runtime? If compiled, how can I see the generated Java (?) files? (something similar to -keep compiler option in Flash Builder)</li>
+    <li>And many other things (like, working of Intent, i18n, logging), but these are somethings I need to learn as I dive further in android..</li>
+</ul>
+
+
+<p>Tasks for coming days:</p>
+
+<ul>
+    <li>Finish the Tutorials in the resources, and then go to the samples folder available with the SDK.</li>
+    <li>Try to make a couple of simple *usable* apps, so that I get enough practice with the SDK APIs</li>
+</ul>
+
+
+<p>Also, attaching the projects <a title="HelloAndroid.zip" href="http://saiprasad.me/assets/HelloAndroid.zip">HelloAndroid.zip</a> and <a title="HelloViews.zip" href="http://saiprasad.me/assets/HelloViews.zip">HelloViews.zip</a> I made during my learning.</p>
+
+<p>Wish me that I gain pace in learning Android over the next few weeks&hellip;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Things to remember for Android !!!]]></title>
+    <link href="http://saiprasad.me/blog/2009/05/things-to-remember-for-android/"/>
+    <updated>2009-05-03T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2009/05/things-to-remember-for-android</id>
+    <content type="html"><![CDATA[<ul><li>android:layout_width and android:layout_height are compulsory for all nodes.</li><li>The outermost container should contain the attribute: xmlns:android="http://schemas.android.com/apk/res/android"<br /></li></ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Installing Android !!!]]></title>
+    <link href="http://saiprasad.me/blog/2009/04/installing-android/"/>
+    <updated>2009-04-30T00:00:00+05:30</updated>
+    <id>http://saiprasad.me/blog/2009/04/installing-android</id>
+    <content type="html"><![CDATA[<p>Few steps for setting up things before developing applications for Android&hellip;.</p>
+
+<ul>
+    <li>Download &amp; Install JRE from<a href="http://www.java.com/en/download/manual.jsp"> http://www.java.com/en/download/manual.jsp</a></li>
+    <li>Download &amp;  Extract Eclipse IDE for Java Developers from <a href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a></li>
+    <li>Download the latest version of Android SDK from<a href="http://developer.android.com/sdk/"> http://developer.android.com/sdk/</a></li>
+    <li>Download ADT (Android Development Tools) from<a href="http://developer.android.com/sdk/adt_download.html"> http://developer.android.com/sdk/adt_download.html</a></li>
+    <li>Start Eclipse, then select <strong>Help</strong> &gt; <strong>Software Updates</strong> &gt; <strong>Find and Install...</strong>.</li>
+    <li>Select <span style="font-weight: bold;">Archive</span> and then browse to the downloaded ADT Zip file.</li>
+    <li> You should see the plugin listed by the URL,     with "Developer Tools" nested within it. Select the checkbox next to        Developer Tools and click <strong>Install...</strong></li>
+    <li>On the subsequent Install window, "Android DDMS" and "Android Developer Tools"     should both be checked. Click <strong>Next</strong>, then <span style="font-weight: bold;">Finish. </span>Restart Eclipse.</li>
+    <li>Select <strong>Window</strong> &gt; <strong>Preferences...</strong> to open the Preferences         panel (Mac: <strong>Eclipse</strong> &gt; <strong>Preferences</strong>).</li>
+    <li>Select <strong>Android</strong> from the left panel.</li>
+    <li>For the <em>SDK Location</em> in the main panel, click <strong>Browse...</strong> and  locate your downloaded SDK directory. Click <strong>Apply</strong>, then <strong>OK</strong>.</li>
+    <li>Now, lets install an AVD (Android Virtual Device). Navigate to /tools in a command line and execute:
+<pre>android create avd --name  #your_avd_name# --target #targetid#</pre>
+</li>
+    <li>Just press <span style="font-weight: bold;">Enter</span> when asked to create an hardware profile.</li>
+</ul>
+
+
+<p>Now you are done with setup&hellip;&hellip;. Happy developing with Android !!! <br/>
+Start with<span style="font-style: italic;"> Hello, World</span> program in the documentation.</p>
+
+<p>&mdash;<br/>
+Sai Prasad</p>
+]]></content>
+  </entry>
+  
+</feed>

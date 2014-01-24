@@ -1,136 +1,791 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="google-site-verification" content="59Nj9VPHnwuNYWqlo_-pZwK8a_hXmMRyKsRxm-d8H0k" />
-        <base target="_blank">
-        <title>Sai Prasad</title>
-        <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
-    </head>
-    <body>
-    <div id="container">
-        <div class="inner-container">
-        <div class="edge top"></div>
-        <div class="content">
-            <h1>Sai Prasad</h1>
-            <div class="subtitle">Software Enthusiast</div>
-            <div class="subcontent">
-                <h3>Contact</h3>
-                <div>
-                    <img src="/images/email2.png" alt="@" class="icon email"/> <a href="mailto:saiprasad.ch@gmail.com" title="Drop me a mail">saiprasad.ch@gmail.com</a>
-                </div>
-            </div>
-            <div class="subcontent">
-                <h3>Web Profiles</h3>
-                <ul class="share">
-                    <li><a class="wordpress" href="/blog/" title="Blog">Blog</a></li>
-                    <li><a class="linkedin" href="http://www.linkedin.com/in/saich" title="LinkedIn Profile">LinkedIn</a></li>
-                    <li><a class="github" href="https://github.com/saich" title="My work on GitHub">Github</a></li>
-                    <li><a class="twitter" href="https://twitter.com/saiprasadch" title="Follow me on Twitter">Twitter</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="edge bottom"></div>
-    </div></div>
-    <div id="quine"></div>
-    <div id="unsupported" style="display:none;">Your browser is not supported. Please use the latest Mozilla Firefox or Google Chrome or Safari</div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript">
-        var text = "<!DOCTYPE html>" + document.getElementsByTagName('html')[0].innerHTML + "</html>";
-        text=text.replace(/\s*(\n\s*)+/ig,'').replace(/\s+(?= )/g,'').split("");
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Reflections of a scattered Mind!!</title>
+  <meta name="author" content="Sai Prasad">
 
-        var image=new Image(),
-            span=$('<span>',{'text':'.'});
-        $('#quine').append(span);
+  
+  <meta name="description" content="After much thought, I&rsquo;ve decided to put this blog on hold for a while&hellip; Let me list the excuses I&rsquo;ve behind this decision: I&#8217; &hellip;">
+  
 
-        var span_width=span.width(),
-            span_height=span.height();
-        span.remove();
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        image.src='/images/me-large.jpg';
-        image.onload=function(){
-            var cnvs=document.createElement('canvas');
-            cnvs.width=image.width;
-            cnvs.height=image.height;
+  
+  <link rel="canonical" href="http://saiprasad.me">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Reflections of a scattered Mind!!" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
-            $('body').append(cnvs);
+  
 
-            var ctx=cnvs.getContext('2d');
-            ctx.drawImage(image,0,0);
-            var per_box=Math.floor(((cnvs.width*cnvs.height)/text.length)),
-                ratio=span_height/span_width,
-                x_size=Math.sqrt(per_box/ratio),
-                y_size=per_box/x_size,
-                imageData;
+</head>
 
-            try {
-                imageData=ctx.getImageData(0,0,cnvs.width,cnvs.height);
-                getPoints(imageData);
-            } catch(ex) {
-                $("#unsupported").show();
-            }
-            $(cnvs).remove();
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Reflections of a scattered Mind!!</a></h1>
+  
+    <h2>"Not all scattered pieces are of broken glass"</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:saiprasad.me" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/on-hold/">On Hold</a></h1>
+    
+    
+      <p class="meta">
         
-            function getPoints(imagedata){
-                var i=0,lastSeven='';
-                
-                var target_rows=Math.ceil((cnvs.height-2) / y_size)+1,
-                    target_cols=Math.ceil((cnvs.width-2) / x_size)+1,
-                    ypad=span_height;
-                
-                $("#quine").width(span_width*target_cols + "px");
-                
-                for(var y=0;y<cnvs.height-1;y+=y_size){
-                    var total=0,row=$('<span>').css({'display':'block','height':span_height});
-                    var ypos = y * span_height / y_size;
 
-                    for(var x=0;x<cnvs.width - 1;x+=x_size){
-                        var color=getColor(imageData,x,y),
-                        character=(text[i] !== undefined) ? text[i] : "";
-                        
-                        i++;
-                        total++;
 
-                        $(row).append($("<span>",{
-                            'style':('color:'+ color),
-                            'text':character
-                            }
-                        ));
-                        var font_style="normal";
-                        var font_size="16px";
 
-                        lastSeven = (lastSeven+character).substr(-7);
-                    }
-                   $('#quine').append(row);
-                }
-            }
-        };
-          
-          /* get the color */
-        function getColor(imageData, x, y) {
-            var x = Math.round(x),
-                y = Math.round(y),
-                index = (y * imageData.width + x) * 4,
-                red = imageData.data[index],
-                green = imageData.data[index + 1],
-                blue = imageData.data[index + 2],
-                alpha = imageData.data[index + 3];
 
-            /* Add border around the pixel */
-            for(var x2 = -1; x2 <= 1; x2++) {
-                for(var y2 = -1; y2 <= 1; y2++) {
-                    if(!(x2 == 0 && y2 == 0)){
-                        var index_new = ((y + y2) * imageData.width + x + x2) * 4;
-                        imageData.data[index_new] = 255;
-                        imageData.data[index_new + 1] = 255;
-                        imageData.data[index_new + 2] = 255;
-                        imageData.data[index_new + 3] = alpha;
-                    }
-                }
-            }
-            return "rgb(" + red + "," + green + "," + blue + ")";
+
+
+
+
+  
+
+
+<time datetime="2012-11-24T00:00:00+05:30" pubdate data-updated="true">24 November, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After much thought, I&rsquo;ve decided to put this blog on hold for a while&hellip; Let me list the excuses I&rsquo;ve behind this decision:</p>
+
+<ol>
+    <li><span style="line-height: 18px;">I&#8217;m busy, and unable to allocate time to this.</span></li>
+    <li><span style="line-height: 18px;">I&#8217;ve moved away from PHP, and this blog runs on PHP.</span></li>
+    <li><span style="line-height: 18px;">Writing is not the skill I have.</span></li>
+</ol>
+
+
+<div></div>
+
+
+<div><span style="line-height: 18px;">But what&#8217;s the actual reason?</span></div>
+
+
+<div>
+<ol>
+    <li><span style="line-height: normal;">Commitment - seems like I lack it w.r.t this blog. You can see this from the inconsistent gaps between the posts.</span></li>
+    <li><span style="line-height: normal;">A lot of things are pending in my queue for a long time. Its time to trim down some areas, so that I focus on the better things.</span></li>
+</ol>
+</div>
+
+
+<div></div>
+
+
+<div>I hope this is temporary, and would come back to this sonner. Until then, adieu.</div>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/10/what-do-i-regret-the-most/">What Do I Regret the Most?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-07T00:00:00+05:30" pubdate data-updated="true"> 7 October, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Its life.. Things happen.. Some things you never wanted to happen, somethings you never thought could happen, some bad things, and some surprisingly life-changing things&hellip; Out of everything, there is one thing I truly regret, wish it never happened &ndash; <strong>Growing up</strong>.</p>
+
+<p>So, what did growing up do to me, you may wonder..</p>
+
+<ul>
+    <li>It made me a killer. Forced me kill <del>some</del> many of my own dreams.</li>
+    <li>Showed me its not easy to make a choice, and later made me realize that some choices could turn out to be really bad ones..</li>
+    <li>Showed me you could end up in a big mess even with no wrong decision taken.</li>
+    <li>Its not impossible to repeat that one big mistake you&#8217;d never ever want to.</li>
+    <li>Surprisingly and shockingly, you can&#8217;t choose people. They come in to your life, maybe turn around our world without your knowledge, but you can&#8217;t choose / control if they are going to stay.</li>
+    <li>It made me experience that there are things you can&#8217;t move on from, you just need to live with it forever.</li>
+</ul>
+
+
+<p>Maybe nothing else could express this better than this song.</p>
+
+<iframe src="http://www.youtube.com/embed/3uFww9a3D4E" frameborder="0" width="420" height="315"></iframe>
+
+
+<p>Now, I miss that little stupid and ignorant boy, who believed that everything could be simple if you don&rsquo;t complicate, and trying to find answer to his only big question &ndash; why does people complicate everything unnecessarily?</p>
+
+<p>Ignorance is truly bliss.</p>
+
+<p>Maybe its time to accept that life isn&rsquo;t going to be easy just like that, it takes effort, and more importantly belief that &ldquo;that some day&rdquo; is right around the corner, maybe.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/recap-of-my-life-the-last-two-weeks/">Recap of My Life: The Last Two Weeks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-18T00:00:00+05:30" pubdate data-updated="true">18 September, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, this time I guess there has not been much technical readings&hellip; The only readings I have done are <a href="http://pluggd.in">pluggd.in</a> and <a href="http://techcrunch.com">techcrunch</a>&hellip; Unread posts in my Google Reader, <a href="http://www.quora.com/Sai-Prasad-Ch">Quora</a> &amp; even on <a href="https://twitter.com/saiprasadch">Twitter</a> has increased a lot&hellip; The major factor has been to live without a laptop (since the display doesn&rsquo;t work anymore).</p>
+
+<p>So, there are a few things that changed in my life: I&rsquo;m trying early to bed, early to rise for the last two days, and it has turned decent so far&hellip;. (I still believe that nocturnal life is best, though)..  I think its time to keep Windows away for a while and move into Mac / Linux (I&rsquo;m typing this post on a MacBook). All my life, I used Windows and always thought on moving into Ubuntu, but couldn&rsquo;t because of all kinds of games&hellip; Oh, though I used Mac earlier, MacBook Pro is pretty good and I&rsquo;m loving its multi-touch gestures&hellip; :)</p>
+
+<p>Apart from doing nothing, played a decent amount of Dota 2 on roommates laptop. One thing that came out of gaming is I kind of started thinking about having a interactive 360° virtual trial room (inspired from hero&rsquo;s animation from Dota 2 game load screen). But, this for for sometime later, maybe a month or two or even later&hellip;</p>
+
+<p>For this week and next, I&rsquo;m majorly going to spend time learning <a href="http://developer.yahoo.com/cocktails/mojito/">mojito</a>, some basic selenium and maybe a good Unit Testing framework (need to figure that one out).</p>
+
+<p>I couldn&rsquo;t resist not putting the below comic here (credit: <a href="http://gultrage.tumblr.com/">gultRage</a>)</p>
+
+<p><a href="http://gultrage.tumblr.com/post/30788578420/wifi"><img class="alignnone" title="Not so distant future" src="http://24.media.tumblr.com/tumblr_m9rmcoKrAy1qjuqo1o1_1280.png" alt="" width="651" height="241" /></a></p>
+
+<p>This site contains very good quality comics, particularly for telugu folks..</p>
+
+<p><strong>PS:</strong> Dear KeePass, since you do not support Mac, I&rsquo;m having hell lot of trouble accessing my passwords. Need to downgrade the database, and move to KeePassX for now&hellip; But, for longterm, I&rsquo;m considering hosting a private web-based KeePass client (which I&rsquo;m planning to search / develop)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/09/this-week-in-my-life/">This Week in My Life</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-02T00:00:00+05:30" pubdate data-updated="true"> 2 September, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This is really getting ridiculous.. My last post on this blog was 4 months ago, and the one before that 9 months ago.. This is not how I meant to do things.. This is also not the way things are supposed to go&hellip; Its true that more than sometimes, it is very hard, time-taking and exhaustive to put your thoughts on paper (err, keyboard)..  But, if I keep doing it at this pace, this blog shall do more harm to me than any good. Its time this thing changes&hellip; So, from this week, I shall put something like a weekly report which shall contain sharing things I found interesting, what I&rsquo;m thinking hard etc&hellip;  Hopefully, this shall become a habit, a good habit actually&hellip;</p>
+
+<p><strong>Geekiness infiniti (You can never run out of geekiness :P)</strong></p>
+
+<ul>
+    <li>As much as I hate Internet Explorer, this article <a href="http://www.nczonline.net/blog/2012/08/22/the-innovations-of-internet-explorer/">The Innovations of Internet Explorer</a> reminded (and taught) me how it was a really innovative game changer at that time, without which the browsers wouldn&#8217;t have been today where they are are.. Seriously, Internet Explorer seems like it threw away a whole new world of opportunity.</li>
+    <li>Stumbled upon usage of !function(){}(). Looks cleaner than (function(){})().. From now onwards, I&#8217;m using this ! preceding style for all my anonymous functions in Javascript. I can save a byte too&#8230; More details at:<a href="http://stackoverflow.com/questions/3755606/what-does-the-exclamation-mark-do-before-the-function"> What does the exclamation mark do before the function?</a></li>
+    <li>This answer on Quora changed all my perspective on Ph.D. and research-oriented educations. I was always in favor of breadth than depth, but this post convinces me that depth is the way to reach limits and beyond.<span class="quora-content-embed" data-name="Philosophy/How-do-I-remind-myself-that-I-know-nothing/answer/Prasanna-Madhavan/quote/15186">Read <a class="quora-content-link" href="http://www.quora.com/Philosophy/How-do-I-remind-myself-that-I-know-nothing/answer/Prasanna-Madhavan/quote/15186" data-width="575" data-height="4888" data-embed="vQYqyYA" data-type="quote" data-id="15186" data-key="8406a3e7ea9306047c76e9ce0e2e8aca">Quote of Prasanna Madhavan&#8217;s answer to Philosophy: How do I remind myself that I know nothing?</a> on <a href="http://www.quora.com">Quora</a><script type="text/javascript" src="http://www.quora.com/widgets/content"></script></span></li>
+</ul>
+
+
+<p><strong>Non-technical musings</strong></p>
+
+<ul>
+    <li><a href="http://bhorowitz.com/2012/08/18/a-good-place-to-work/">A Good Place to Work</a> - The author (a CEO) explains why having regular 1:1s is a must to make your workplace better. He even went further to forcing his managers to have regular 1:1s (or else get fired). This seems ridiculous to me - Companies claim of open-door policy, and the same companies ask for formal 1:1 discussion. If you have open-door policy, and you discuss everything with your manager in general in day-to-day life, what else can you talk about in the 1:1, except for staring at each other? The right thing seems to be to ensure the right communications (in any way) between employees and managers, but remember that 1:1s doesn&#8217;t work for everyone (that includes me).</li>
+    <li><a href="http://gtoosphere.blogspot.in/2012/08/so-i-was-wishing-flawsophy-for-his.html">So I was wishing @flawsophy for his birthday&#8230;</a> - Funny, but with insights into the current state of wishing on birthdays in India. Its true, there is no more bigger insult than <em>not</em> wishing him/her on his/her birthday. And if you two are in relationship, expect a break-up message if you are not the first and last to wish them &#8220;Happy birthday&#8221;.. Oh, there is also a <strong>non-bailable Birthday Offence</strong>. Seriously, whats wrong with people? As if you are getting a new beginning every year on your birthday?</li>
+</ul>
+
+
+<p><strong>Garbage inside my mind</strong></p>
+
+<p>How do you take a good decision in life? You can never be sure. You can either choose a decision and pray that it will turn out to be good decision (which has 0.5 probability). Else, put all your effort to make sure this decision turns out to be a good one.</p>
+
+<p>Limited time &ndash; All I&rsquo;ve got is limited time. The piled up pending tasks shows how important it is for me to manage my limited time properly. Its time to take Time Management seriously, any tips here would be appreciated..</p>
+
+<p>Ahh&hellip; end of the post.. See you next week my dear blog&hellip;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/impressed-with-myself/">Impressed With Myself</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-02T00:00:00+05:30" pubdate data-updated="true"> 2 May, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>Disclaimer:</strong> Just another personal rant written with sleepy eyes &amp; confused mind (as always). Helps in killing a minute or two of your time (better to kill the time by yourself, rather than allowing it to die by itself, isn&rsquo;t it?)</p>
+
+<p>If you knew me personally, you&rsquo;d certainly remember me complaining that I completely wasted my 4-years of time during my under-graduation. No I&rsquo;m not denying that now.. Its still holds true&hellip; However, like Milton said &ldquo;Every cloud has a silver lining&rdquo;, I realized just a couple of days ago that my college days weren&rsquo;t as worse as I always believed (in terms of learning &amp; profession).</p>
+
+<p>Hmm.. lets see.. What could it be that changed my mind? Some things (which I can share in public), that, well not exactly proud of, but feel-good things I did or happened during those interesting (like that Chinese curse &ndash; May you live in the interesting times) years.</p>
+
+<ul>
+    <li>My first semi-serious PHP site, self-learning, and doing all things by myself (design, backend, security, database etc.) came out pretty well than I expected. Site is archived <a href="http://2008.tapsnitw.org/">here</a>. (Well, thanks to CodeIgniter for making a lot of stuff easier :) )</li>
+    <li>Again PHP, a complete rewrite of the above site using Kohana &amp; a fresh new design.. Actually, I copied basic idea of UI from IITB&#8217;s Techfest site (maybe, 2008), changed the color theme, changed &amp; improved few elements, but I still consider it my best UI design yet (apart, from the top banner &amp; menu). And the best part - the <a href="http://www.tapsnitw.org/">site</a> is still in use actively (since 2008).</li>
+    <li>Breaking into Technozion site (NIT, Warangal&#8217;s Technical fest) and worse, I kind of defaced it. Did things like changing the password&#8217;s of all accounts once in every few hours, modifying database records of some particular users etc. (Thanks to some simple SQL injections). It was really fun, but I realized lately it wasn&#8217;t very moral thing to do. (actually, I passed the vulnerability info their web team, but they fixed it only partially, which kind of drove me crazy to do all that stuff).</li>
+    <li>Thanks to <a href="https://twitter.com/sumit_bindal">@sumit_bindal</a> for reminding me how much I used to enjoy the puzzles on <a href="https://www.hackthissite.org">hackthissite.org</a>. I used to spend my free-time on this site very much &amp; certainly gave me a new angle of thought while writing code. Maybe, I should start again on those puzzles &amp; see where I stand today&#8230;</li>
+    <li>It certainly feels good when you are only the one who solved the problem (with correct answer) in your lab exam. Doesn&#8217;t it? Thankfully, it was open-book exam, or else who would remember what is meant by articulation points, connected components etc. when you always know Google will help you anytime you need it..</li>
+    <li>B-Tree implementation, which took me some 7 hours, and yet I was really really excited that I could do that&#8230; solving the 8-queen problem in my 1st year of C++, without using 8 loops (sadly, I can&#8217;t think of any solution even today). Credit certainly goes to K.Ramesh for showing that programming is fun, and nothing else.. :). After all, I ended up being &#8220;not the worst programmer ever&#8221;..</li>
+    <li>Getting a job in the first campus placement company itself. I was shocked, so was the complete college (considering how bad my academics were, and the other students who got selected were the class-toppers of the course). Actually, this became a memory I relish, not because of getting a job, but how awesome it was to fool <a href="https://twitter.com/harikine">@harikine</a> for 2 complete days making him believe I didn&#8217;t get that job, but everyone else knew the truth&#8230; (Trust me, it wasn&#8217;t easy, but a lot of people helped in hiding it from him..) Certainly a contender for my best moment of my college life&#8230;</li>
+</ul>
+
+
+<p>Ouch&hellip; just 7 points&hellip; The silver lining seems to be very slim, but nevertheless, it exists.. And I can even say I&rsquo;m impressed with myself, for the joy of something coming out from what you believe as a black hole&hellip;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/11/learning-android-why-i-moved-away-from-eclipse/">Learning Android : Why I Moved Away From Eclipse</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-15T00:00:00+05:30" pubdate data-updated="true">15 November, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So, after a very long break, I started back with getting familiar with Android development&hellip; Felt happy seeing that Google has made a lot of improvements / features in the ADT. But, everything evaporated when I tried to debug an app on my machine, and got this error: &ldquo;Android Packaging Problem: resources.ap_ does not exist&rdquo;. I tried cleaning the project, restarted Eclipse, and re-creating the Eclipse project and this error didn&rsquo;t go away&hellip; Googling it also didn&rsquo;t help much&hellip; Then, I went to sleep&hellip;.</p>
+
+<p>The next day, to my surprise, there was no error and I was able to debug my app, at last&hellip; But, it didn&rsquo;t last long&hellip; After 3 hours, the same error is back&hellip;. It looked like this ADT solves everything else (Resource Editors, WYSIWYG Editor etc.) but the basic task it is supposed to do (Basic compiling / packaging / debugging)&hellip;</p>
+
+<p>Now that perfect mood is set to go hunting for a new and <em>reliable</em> IDE, I searched in <a href="http://www.stackoverflow.com" target="_blank">stackoverflow.com</a> for answers&hellip; Found some thread saying <a href="http://www.jetbrains.com/idea/features/google_android.html" target="_blank">IntelliJ IDEA</a> is good&hellip;. So, downloaded it, downloaded its dependencies (JSDK 1.6) and installed them&hellip; And there is no turning back&hellip; I don&rsquo;t miss the resource.ap_ error at all&hellip;</p>
+
+<p><strong>The Pros of IDEA:</strong></p>
+
+<ol>
+    <li><strong></strong>Reliable (unlike ADT for Eclipse) at compiling and packaging&#8230;</li>
+    <li>Supports the Android &#8220;Library&#8221; projects also&#8230; (Tried it with <a href="https://github.com/cyrilmottier/GreenDroid" target="_blank">GreenDroid</a>, and worked without a glitch)</li>
+    <li>Import Eclipse projects directly&#8230;</li>
+    <li>Integrated github support (and a few more Version Controls)</li>
+    <li>Decent enough features, for Refactoring, Imports optimization, Code completion etc.</li>
+</ol>
+
+
+<p><strong>The Cons:</strong></p>
+
+<p>This could become a big list, but the reliability when compared to Eclipse beats everything in the below list combined..at least for me&hellip;</p>
+
+<ol>
+    <li>Page Scrolling - Cannot use the Mouse Scroll.. Need to click on scrollbar and scroll it down.. :(</li>
+    <li>Logcat sucks!! The one in Eclipse is hell lot better.. Seriously needs Filter by Application, Colored text based on log level, and saved searches.. A simple textarea doesn&#8217;t justify such an important feature..</li>
+    <li>The keyboard shortcuts are completely different from Eclipse.. Why doesn&#8217;t IDEs come with keyboard binding set of other IDEs that user can choose to use? :(</li>
+    <li>Memory hogger, seems to be more than Eclipse.. Could it be because of Swing &amp; Java?</li>
+    <li>Basic XML Editor - There are no Android Resource Editors&#8230;. I prefer to write XML files by hand, though&#8230;</li>
+    <li>Some code warnings may misguide you.. It keeps telling me that <a href="http://developer.android.com/reference/android/database/Cursor.html" target="_blank">Cursor</a> cannot be NULL, though I have personally seen cases where it will be&#8230;</li>
+</ol>
+
+
+<p>In simpler words, IDEA may not be as good as Eclipse in general, but for Android development, it is certainly a better choice&hellip; at least for now..</p>
+
+<p>Atleast, you&rsquo;ll know you are frustrated not because of IDE&hellip; (Trust me, frustration because of an IDE, instead of logic/code isn&rsquo;t even worth trying to know.. )</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/10/square-one/">Square One</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-16T00:00:00+05:30" pubdate data-updated="true">16 October, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You begin at the Square One, you go forward with hopes and dreams, and most importantly with no idea what the future holds for you. You go non-stop until that day comes when completely unexpected happens, and you&rsquo;ll be just thrown out back on to Square One.</p>
+
+<p>You get dejected, depressed and lose all your hopes that everything got ruined. You live in darkness of the past, until one day you say to yourself &ldquo;Enough! You got to get moving&rdquo;&hellip; And, you start moving into that unknown future, with fear still in your mind&hellip;. You try to take one step at a time, but you haven&rsquo;t gotten over your prior experiences. Yet, when you start getting over past and start moving forward with confidence, it happens again! You&rsquo;ll land in the Square One again, now with no knowledge on how, when and why&hellip;.</p>
+
+<p>This time, you begin your journey again into those unknown lands, but instead of fear, this time you have that strange confidence &ndash; &ldquo;Not to fear&hellip; I can get over even if the worse happens again!&rdquo;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/09/geeks-are-awesome/">Geeks Are Awesome!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-09T00:00:00+05:30" pubdate data-updated="true"> 9 September, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>You got to love the geeks! For their unique talent &amp; ability to transform any topic (including philosophy) into a discussion topic of bytes, pointers, stacks, exceptions etc&hellip;. They can convert every topic in this world to their area of expertise.. :D</p>
+
+<p><img title="A small GeekTalk" src="/images/geeky-thread.png" alt="" width="680" height="527" /><br>
+<em>A small geeky conversation from my wall on Facebook</em>
+&nbsp;</p>
+
+<p>Dedicated to the geeks <a title="Shrey Banga on Facebook" href="https://www.facebook.com/banga.shrey" target="_blank">Shrey Banga</a> &amp; <a title="Sharad Banka on Facebook" href="https://www.facebook.com/sharad.banka" target="_blank">Sharad Banka</a> :D :D</p>
+
+
+<p><strong>Update (11 September, 2011):</strong> Updated the image to include a missing comment (missed earlier since the account was then in deactivated state..)</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/browser-wars-learning-from-each-other/">Browser Wars: Learning From Each Other</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-18T00:00:00+05:30" pubdate data-updated="true">18 June, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The most popular browsers from the country I come from (where Mac is rare) are Google Chrome, Mozilla Firefox &amp; Microsoft Internet Explorer. Like any other browser, these all have the same goal &ndash; to make browsing experience richer &amp; better. Yet, there are a lot of differences in their ways and some are better than other in some ways.</p>
+
+<p>If I ever have to make a generic purpose browser, I&rsquo;d certainly pick good (for inclusion) &amp; bad (for exclusion) things from the current browsers.</p>
+
+<h5>Google Chrome:</h5>
+
+
+<p>The recent one and certainly a game changer. It has improved the user expectations from a browser by 100x.</p>
+
+<p><strong>The Good</strong>:</p>
+
+<ul>
+    <li>The crashless browser -  protect the user even from the crashes in external plug-ins (Thankfully, Firefox also implemented out-of-box plugins)</li>
+    <li>Faster startup time - Do things that are only absolutely needed. Nothing more. Defer everything else, to post-startup (in parallel with the user&#8217;s browsing).</li>
+    <li>Sandboxing - Whatever you do on web stays on web. Protect the machine from all the various security issues.</li>
+    <li>Explicit permissions listed for Extensions - user must know what an extension is capable of (despite of what it claims to do)</li>
+    <li>Silent updation: Push updates only when it is good for users. Then, who would say &#8220;no&#8221; to better browsing experience? So, there is no point in showing an annoying dialog &#8220;Updates Available&#8221; when you already know the user clicks &#8220;yes&#8221;.</li>
+    <li>Incognito Mode starts a new session without closing the current session (sadly, Firefox does that)</li>
+</ul>
+
+
+<p><strong>The Bad: </strong></p>
+
+<ul>
+    <li>Weakest &amp; the most limited extension model - So limited that it may give you a feeling that the word &#8220;extension&#8221; doesn&#8217;t suit it.</li>
+    <li>Still an immature platform for developers. Extension Model hasn&#8217;t moved but the other parts (rendering, UI etc.) are moving forward at a very fast pace. Even, many bugs in the chrome extensions are not getting fixed for many months.</li>
+</ul>
+
+
+<h5>Mozilla Firefox</h5>
+
+
+<p><strong>The Good:</strong></p>
+
+<ul>
+    <li>Super cool extension model. There is almost nothing that can&#8217;t be done by the addons. And, XPCOM works across all the platforms.</li>
+    <li>Known to be the developer-friendly browser from long time. One of the early browsers that emphasized on standards and innovation from its early days.</li>
+</ul>
+
+
+<p><strong>The Bad:</strong></p>
+
+<ul>
+    <li>Known to be memory hog. Not efficient at Memory management. Have issues with Intel&#8217;s hyperthreading.</li>
+    <li>MaxVersion in addons is mandatory and is limited to current version (you can&#8217;t just use * for maxversion). The only issue with this is each and every addon is to be updated (you add features or not) with every major version release (which is once in 12 weeks as of now).</li>
+    <li>Private browsing closes the current session and starts a new one. After closing private session, it restores the earlier session. This means you can&#8217;t do both (with default command line options)</li>
+    <li>Every extension have complete control (including a binary component), because of lack of a permission model. You can never trust an extension because of this!</li>
+</ul>
+
+
+<h5>Internet Explorer</h5>
+
+
+<p><strong>The Good:</strong></p>
+
+<ul>
+    <li>Its never late to catch up with the standards, speed &amp; security (with IE 9 &amp; IE 10)</li>
+    <li>Native 64-bit for 64-bit OS. (I can&#8217;t believe Firefox and Chrome do not have them for Windows)</li>
+</ul>
+
+
+<p><strong>The Bad:</strong></p>
+
+<ul>
+    <li>Still maintains the completely idiotic &#8216;Quirks Mode&#8217;. I don&#8217;t see  the greater cause of maintaining a version which is full of bugs,  extremely slow and follows no standards, and also all developers hate  it.</li>
+    <li>Extension Model - Its a big pain. You need to be comfortable  with COM to get started with. Its much comfortable to think addons  don&#8217;t exist at all for this version.</li>
+    <li>Supports ActiveX plugins when the whole world uses NPAPI plugins.</li>
+</ul>
+
+
+<p><em>Disclaimer: All the above are my own thoughts, and I&rsquo;ve to confess I haven&rsquo;t researched every point. So, not all the above may be true, but is to the best of my knowledge.</em></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2011/06/5-reasons-i-dislike-flash/">5 Reasons I Dislike Flash</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-11T00:00:00+05:30" pubdate data-updated="true">11 June, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The times have changed to where we spend most of our lives on the web. But, web is far from perfect. It has annoyances lurking around at every corner. Most of the times I get annoyed is because of the bad code (in HTML, CSS, Javascript) by the developers. The next big annoyance is from Flash content, but I can&rsquo;t blame the content developers for their code. Its the design issue of the Flash runtime itself&hellip;</p>
+
+<p>The top 5 things in Flash that annoys me daily:</p>
+
+<ol>
+    <li>Browser shortcuts (like, Ctrl+W, Ctrl+T) do not work when focused on flash elements, since it consumes all the keyboard events. I&#8217;d expect it to at least pass them to browser if it doesn&#8217;t handle a key event, but it doesn&#8217;t even bother.</li>
+    <li>Zoom doesn&#8217;t work - Ctrl++, Ctrl+- are useless. You have to read the content in SWF in the published size itself. You cannot increase or decrease it size. :(</li>
+    <li>Middle Click doesn&#8217;t work - I can&#8217;t open a link in new tabs. Opening links in new tabs from SWF is a small-size challenge.</li>
+    <li>I can&#8217;t find the text I&#8217;m looking for with Ctrl + F. You can&#8217;t just search in Flash content, unless the SWF itself contains a search box &amp; search implementation.</li>
+    <li>Its pretty famous &amp; is gonna stay there longer. And the worst part - everyone uses it in their site, though there is absolutely no need for it (making my browsing experience annoying) :(</li>
+</ol>
+
+
+<p>Disclaimer: The above view is completely personal and has absolutely nothing to do with anything (including friends &amp; employer also) else.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/on-hold/">On Hold</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/10/what-do-i-regret-the-most/">What Do I Regret the Most?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/recap-of-my-life-the-last-two-weeks/">Recap of My Life: The Last Two Weeks</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/09/this-week-in-my-life/">This Week in My Life</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/05/impressed-with-myself/">Impressed With Myself</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/saich">@saich</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
         }
-    </script>
-    <script type="text/javascript" src="/javascripts/analytics.js"></script>
-  </body>
+
+        github.showRepos({
+            user: 'saich',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/118016250027747751909?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Sai Prasad -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'saich';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
 </html>
